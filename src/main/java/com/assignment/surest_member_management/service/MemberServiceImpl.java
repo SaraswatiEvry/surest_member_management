@@ -27,19 +27,21 @@ public class MemberServiceImpl implements MemberService {
     private final MemberMapper memberMapper;
 
     @Override
-    public Page<MemberDTO> getAllMembers(int page, int size, String sort, String firstName, String lastName) {
+    public Page<MemberDTO> getAllMembers(int page, int size, String sort, String firstName,
+                                         String lastName) {
 
         Pageable pageable = PageRequest.of(page, size, Sort.by(Sort.Order.by(sort.split(",")[0])
                 .with(Sort.Direction.fromString(sort.split(",")[1]))));
 
         Specification<Member> spec = Specification.unrestricted();
 
-        if(firstName!=null && !firstName.isEmpty()) {
+        if (firstName != null && !firstName.isEmpty()) {
             spec = spec.and((root, query, cb) ->
                     cb.like(cb.lower(root.get("firstName")), "%" + firstName.toLowerCase() + "%"));
         }
-        if(lastName!=null && !lastName.isEmpty()) {
-            spec = spec.and((root, query, cb) -> cb.like(cb.lower(root.get("lastName")), "%" + lastName.toLowerCase() + "%"));
+        if (lastName != null && !lastName.isEmpty()) {
+            spec = spec.and((root, query, cb)
+                    -> cb.like(cb.lower(root.get("lastName")), "%" + lastName.toLowerCase() + "%"));
         }
         return memberRepository.findAll(spec, pageable).map(memberMapper::toMemberDTO);
     }
@@ -55,7 +57,7 @@ public class MemberServiceImpl implements MemberService {
 
     @Override
     public MemberDTO createMember(MemberDTO dto) {
-        if(memberRepository.existsByEmail((dto.getEmail()))) {
+        if (memberRepository.existsByEmail((dto.getEmail()))) {
             throw new EntityExistsException("Member already exists");
         }
         Member member = memberMapper.toMemberEntity(dto);
@@ -81,7 +83,7 @@ public class MemberServiceImpl implements MemberService {
     @Override
     @CacheEvict(value = "members", key = "#id.toString()")
     public void deleteMember(UUID id) {
-        if(!memberRepository.existsById(id)) {
+        if (!memberRepository.existsById(id)) {
             throw new RuntimeException("Member not found");
         }
         memberRepository.deleteById(id);
