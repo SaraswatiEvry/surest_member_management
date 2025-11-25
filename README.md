@@ -1,2 +1,1 @@
-# surest_members
-Surest members management application
+# surest_member_management
