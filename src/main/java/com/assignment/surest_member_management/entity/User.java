@@ -2,7 +2,6 @@ package com.assignment.surest_member_management.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
-
 import java.util.UUID;
 
 @Entity

@@ -15,7 +15,7 @@ public class JwtUtil {
     private static final String SECRET_KEY
             = "aVeryLongSecretKeyThatIsAtLeast64CharactersLongForHS512Algorithm1234567890";
 
-    private Key getSigningKey() {
+    Key getSigningKey() {
         return Keys.hmacShaKeyFor(SECRET_KEY.getBytes());
     }
 

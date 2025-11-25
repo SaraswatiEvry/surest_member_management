@@ -4,7 +4,9 @@ import com.assignment.surest_member_management.dto.MemberDTO;
 import com.assignment.surest_member_management.entity.Member;
 import com.assignment.surest_member_management.repository.MemberRepository;
 import com.assignment.surest_member_management.util.MemberMapper;
+import jakarta.persistence.EntityExistsException;
 import jakarta.persistence.EntityNotFoundException;
+import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.Cacheable;
@@ -39,25 +41,30 @@ public class MemberServiceImpl implements MemberService {
         if(lastName!=null && !lastName.isEmpty()) {
             spec = spec.and((root, query, cb) -> cb.like(cb.lower(root.get("lastName")), "%" + lastName.toLowerCase() + "%"));
         }
-        return memberRepository.findAll(spec, pageable).map(MemberMapper::toMemberDTO);
+        return memberRepository.findAll(spec, pageable).map(memberMapper::toMemberDTO);
     }
 
     @Override
-    @Cacheable(value = "members", key = "#id")
+    @Cacheable(value = "members", key = "#id.toString()")
     public MemberDTO getMemberById(UUID id) {
+        System.out.println("Fetching data for Id : " + id);
         return memberRepository.findById(id)
-                .map(MemberMapper::toMemberDTO)
+                .map(memberMapper::toMemberDTO)
                 .orElseThrow(() -> new EntityNotFoundException("Member not found"));
     }
 
     @Override
     public MemberDTO createMember(MemberDTO dto) {
+        if(memberRepository.existsByEmail((dto.getEmail()))) {
+            throw new EntityExistsException("Member already exists");
+        }
         Member member = memberMapper.toMemberEntity(dto);
-        return MemberMapper.toMemberDTO(memberRepository.save(member));
+        return memberMapper.toMemberDTO(memberRepository.save(member));
     }
 
+    @Transactional
     @Override
-    @CacheEvict(value = "members", key = "#id")
+    @CacheEvict(value = "members", key = "#id.toString()")
     public MemberDTO updateMember(UUID id, MemberDTO dto) {
         Member existing = memberRepository.findById(id)
                 .orElseThrow(() -> new EntityNotFoundException("Member not found"));
@@ -67,12 +74,16 @@ public class MemberServiceImpl implements MemberService {
         existing.setEmail(dto.getEmail());
         existing.setDateOfBirth(dto.getDateOfBirth());
 
-        return MemberMapper.toMemberDTO(memberRepository.save(existing));
+        return memberMapper.toMemberDTO(memberRepository.save(existing));
     }
 
+    @Transactional
     @Override
-    @CacheEvict(value = "members", key = "#id")
+    @CacheEvict(value = "members", key = "#id.toString()")
     public void deleteMember(UUID id) {
+        if(!memberRepository.existsById(id)) {
+            throw new RuntimeException("Member not found");
+        }
         memberRepository.deleteById(id);
     }
 }

@@ -3,7 +3,6 @@ package com.assignment.surest_member_management.service;
 import com.assignment.surest_member_management.entity.Role;
 import com.assignment.surest_member_management.entity.User;
 import com.assignment.surest_member_management.repository.UserRepository;
-import com.assignment.surest_member_management.security.CustomUserDetailsService;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -20,13 +19,13 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
-public class CustomUserDetailsServiceTest {
+public class CustomUserDetailsServiceImplTest {
 
     @Mock
     private UserRepository userRepository;
 
     @InjectMocks
-    private CustomUserDetailsService customUserDetailsService;
+    private CustomUserDetailsServiceImpl customUserDetailsServiceImpl;
 
     @Test
     void loadUserByUsername() throws UsernameNotFoundException {
@@ -35,7 +34,7 @@ public class CustomUserDetailsServiceTest {
 
         when(userRepository.findByUsername("test")).thenReturn(Optional.of(user));
 
-        UserDetails details = customUserDetailsService.loadUserByUsername("test");
+        UserDetails details = customUserDetailsServiceImpl.loadUserByUsername("test");
 
         assertEquals("test", details.getUsername());
         assertTrue(details.getAuthorities().stream().anyMatch(

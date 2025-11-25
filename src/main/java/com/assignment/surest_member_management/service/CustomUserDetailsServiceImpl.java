@@ -1,4 +1,4 @@
-package com.assignment.surest_member_management.security;
+package com.assignment.surest_member_management.service;
 
 import com.assignment.surest_member_management.entity.User;
 import com.assignment.surest_member_management.repository.UserRepository;
@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class CustomUserDetailsService implements UserDetailsService {
+public class CustomUserDetailsServiceImpl implements UserDetailsService {
 
     @Autowired
     private UserRepository userRepository;

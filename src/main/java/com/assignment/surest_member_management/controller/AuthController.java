@@ -2,7 +2,7 @@ package com.assignment.surest_member_management.controller;
 
 import com.assignment.surest_member_management.dto.AuthRequest;
 import com.assignment.surest_member_management.dto.AuthResponse;
-import com.assignment.surest_member_management.security.CustomUserDetailsService;
+import com.assignment.surest_member_management.service.CustomUserDetailsServiceImpl;
 import com.assignment.surest_member_management.security.JwtUtil;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -22,7 +22,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class AuthController {
 
     private final AuthenticationManager authenticationManager;
-    private final CustomUserDetailsService userDetailsService;
+    private final CustomUserDetailsServiceImpl userDetailsService;
     private final JwtUtil jwtUtil;
 
     @PostMapping("/login")
