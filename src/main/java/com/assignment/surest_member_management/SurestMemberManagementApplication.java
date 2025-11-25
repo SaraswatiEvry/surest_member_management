@@ -8,7 +8,7 @@ import org.springframework.cache.annotation.EnableCaching;
 @EnableCaching
 public class SurestMemberManagementApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(SurestMemberManagementApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(SurestMemberManagementApplication.class, args);
+    }
 }
