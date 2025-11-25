@@ -2,9 +2,10 @@ package com.assignment.surest_member_management.service;
 
 import com.assignment.surest_member_management.dto.MemberDTO;
 import com.assignment.surest_member_management.entity.Member;
+import com.assignment.surest_member_management.exception.MemberAlreadyExistsException;
+import com.assignment.surest_member_management.exception.MemberNotFoundException;
 import com.assignment.surest_member_management.repository.MemberRepository;
 import com.assignment.surest_member_management.util.MemberMapper;
-import jakarta.persistence.EntityExistsException;
 import jakarta.persistence.EntityNotFoundException;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
@@ -52,13 +53,13 @@ public class MemberServiceImpl implements MemberService {
         System.out.println("Fetching data for Id : " + id);
         return memberRepository.findById(id)
                 .map(memberMapper::toMemberDTO)
-                .orElseThrow(() -> new EntityNotFoundException("Member not found"));
+                .orElseThrow(() -> new MemberNotFoundException(id));
     }
 
     @Override
     public MemberDTO createMember(MemberDTO dto) {
         if (memberRepository.existsByEmail((dto.getEmail()))) {
-            throw new EntityExistsException("Member already exists");
+            throw new MemberAlreadyExistsException(dto.getEmail());
         }
         Member member = memberMapper.toMemberEntity(dto);
         return memberMapper.toMemberDTO(memberRepository.save(member));
