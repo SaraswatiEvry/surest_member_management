@@ -1,0 +1,1141 @@
+2025-12-08 12:46:31 [Test worker] INFO  c.s.i.MemberControllerIntegrationTest - Starting MemberControllerIntegrationTest using Java 17.0.17 with PID 27856 (started by SaraswatiHiremath in C:\Users\SaraswatiHiremath\Downloads\surest_member_management\surest_member_management)
+2025-12-08 12:46:31 [Test worker] DEBUG c.s.i.MemberControllerIntegrationTest - Running with Spring Boot v3.5.7, Spring v6.2.12
+2025-12-08 12:46:31 [Test worker] INFO  c.s.i.MemberControllerIntegrationTest - No active profile set, falling back to 1 default profile: "default"
+2025-12-08 12:46:32 [Test worker] DEBUG o.s.w.c.s.GenericWebApplicationContext - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@218f2f51
+2025-12-08 12:46:35 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-12-08 12:46:35 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-08 12:46:36 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 607 ms. Found 2 JPA repository interfaces.
+2025-12-08 12:46:36 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-12-08 12:46:36 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-12-08 12:46:36 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.surest.repository.MemberRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-12-08 12:46:36 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.surest.repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-12-08 12:46:36 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 17 ms. Found 0 Redis repository interfaces.
+2025-12-08 12:46:46 [Test worker] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-08 12:46:47 [Test worker] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@28eb6c02
+2025-12-08 12:46:47 [Test worker] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-08 12:46:47 [Test worker] INFO  org.flywaydb.core.FlywayExecutor - Database: jdbc:postgresql://localhost:5432/surest_db (PostgreSQL 18.1)
+2025-12-08 12:46:47 [Test worker] WARN  o.f.c.i.database.base.Database - Flyway upgrade recommended: PostgreSQL 18.1 is newer than this version of Flyway and support has not been tested. The latest supported version of PostgreSQL is 17.
+2025-12-08 12:46:47 [Test worker] INFO  o.f.core.internal.command.DbValidate - Successfully validated 2 migrations (execution time 00:00.113s)
+2025-12-08 12:46:47 [Test worker] INFO  o.f.core.internal.command.DbMigrate - Current version of schema "public": 2
+2025-12-08 12:46:47 [Test worker] INFO  o.f.core.internal.command.DbMigrate - Schema "public" is up to date. No migration necessary.
+2025-12-08 12:46:48 [Test worker] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-08 12:46:48 [Test worker] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.33.Final
+2025-12-08 12:46:48 [Test worker] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-12-08 12:46:49 [Test worker] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-08 12:46:49 [Test worker] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 18.1
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-12-08 12:46:55 [Test worker] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-08 12:46:55 [Test worker] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-08 12:46:56 [Test worker] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsServiceImpl
+2025-12-08 12:46:57 [Test worker] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-08 12:46:57 [Test worker] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 12 mappings in 'requestMappingHandlerMapping'
+2025-12-08 12:46:57 [Test worker] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2025-12-08 12:46:59 [Test worker] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-12-08 12:46:59 [Test worker] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-12-08 12:47:00 [Test worker] DEBUG c.surest.security.JwtRequestFilter - Filter 'jwtRequestFilter' configured for use
+2025-12-08 12:47:00 [Test worker] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-12-08 12:47:00 [Test worker] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-12-08 12:47:00 [Test worker] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 4 ms
+2025-12-08 12:47:00 [Test worker] INFO  c.s.i.MemberControllerIntegrationTest - Started MemberControllerIntegrationTest in 30.521 seconds (process running for 35.006)
+2025-12-08 12:47:01 [Test worker] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.surest.controller.MemberController#getAllMembers(int, int, String, String, String)
+2025-12-08 12:47:01 [Test worker] WARN  o.s.d.w.c.SpringDataJacksonConfiguration$PageModule$WarningLoggingModifier - Serializing PageImpl instances as-is is not supported, meaning that there is no guarantee about the stability of the resulting JSON structure!
+	For a stable JSON structure, please use Spring Data's PagedModel (globally via @EnableSpringDataWebSupport(pageSerializationMode = VIA_DTO))
+	or Spring HATEOAS and Spring Data's PagedResourcesAssembler as documented in https://docs.spring.io/spring-data/commons/reference/repositories/core-extensions.html#core.web.pageables.
+
+2025-12-08 12:47:01 [Test worker] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2025-12-08 12:47:01 [Test worker] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [Page 1 of 1 containing com.surest.dto.MemberDTO instances]
+2025-12-08 12:47:01 [SpringApplicationShutdownHook] DEBUG o.s.w.c.s.GenericWebApplicationContext - Closing org.springframework.web.context.support.GenericWebApplicationContext@218f2f51, started on Mon Dec 08 12:46:32 IST 2025
+2025-12-08 12:47:02 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-08 12:47:02 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-12-08 12:47:02 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-12-08 12:47:21 [Test worker] INFO  c.s.i.MemberControllerIntegrationTest - Starting MemberControllerIntegrationTest using Java 17.0.17 with PID 14848 (started by SaraswatiHiremath in C:\Users\SaraswatiHiremath\Downloads\surest_member_management\surest_member_management)
+2025-12-08 12:47:21 [Test worker] DEBUG c.s.i.MemberControllerIntegrationTest - Running with Spring Boot v3.5.7, Spring v6.2.12
+2025-12-08 12:47:21 [Test worker] INFO  c.s.i.MemberControllerIntegrationTest - No active profile set, falling back to 1 default profile: "default"
+2025-12-08 12:47:21 [Test worker] DEBUG o.s.w.c.s.GenericWebApplicationContext - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@62054faf
+2025-12-08 12:47:24 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-12-08 12:47:24 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-08 12:47:25 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 506 ms. Found 2 JPA repository interfaces.
+2025-12-08 12:47:25 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-12-08 12:47:25 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-12-08 12:47:25 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.surest.repository.MemberRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-12-08 12:47:25 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.surest.repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-12-08 12:47:25 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 16 ms. Found 0 Redis repository interfaces.
+2025-12-08 12:47:32 [Test worker] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-08 12:47:33 [Test worker] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2befecc
+2025-12-08 12:47:33 [Test worker] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-08 12:47:33 [Test worker] INFO  org.flywaydb.core.FlywayExecutor - Database: jdbc:postgresql://localhost:5432/surest_db (PostgreSQL 18.1)
+2025-12-08 12:47:33 [Test worker] WARN  o.f.c.i.database.base.Database - Flyway upgrade recommended: PostgreSQL 18.1 is newer than this version of Flyway and support has not been tested. The latest supported version of PostgreSQL is 17.
+2025-12-08 12:47:34 [Test worker] INFO  o.f.core.internal.command.DbValidate - Successfully validated 2 migrations (execution time 00:00.144s)
+2025-12-08 12:47:34 [Test worker] INFO  o.f.core.internal.command.DbMigrate - Current version of schema "public": 2
+2025-12-08 12:47:34 [Test worker] INFO  o.f.core.internal.command.DbMigrate - Schema "public" is up to date. No migration necessary.
+2025-12-08 12:47:34 [Test worker] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-08 12:47:34 [Test worker] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.33.Final
+2025-12-08 12:47:34 [Test worker] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-12-08 12:47:35 [Test worker] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-08 12:47:35 [Test worker] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 18.1
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-12-08 12:47:39 [Test worker] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-08 12:47:39 [Test worker] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-08 12:47:40 [Test worker] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsServiceImpl
+2025-12-08 12:47:40 [Test worker] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-08 12:47:41 [Test worker] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 12 mappings in 'requestMappingHandlerMapping'
+2025-12-08 12:47:41 [Test worker] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2025-12-08 12:47:42 [Test worker] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-12-08 12:47:42 [Test worker] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-12-08 12:47:43 [Test worker] DEBUG c.surest.security.JwtRequestFilter - Filter 'jwtRequestFilter' configured for use
+2025-12-08 12:47:43 [Test worker] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-12-08 12:47:43 [Test worker] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-12-08 12:47:43 [Test worker] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 3 ms
+2025-12-08 12:47:43 [Test worker] INFO  c.s.i.MemberControllerIntegrationTest - Started MemberControllerIntegrationTest in 23.603 seconds (process running for 28.512)
+2025-12-08 12:47:44 [Test worker] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.surest.controller.MemberController#getMemberById(UUID)
+2025-12-08 12:47:44 [Test worker] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2025-12-08 12:47:44 [Test worker] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [MemberDTO(id=bccfa3af-d85f-4fbe-8428-abe3680e055b, firstName=John, lastName=Doe, dateOfBirth=1990-01 (truncated)...]
+2025-12-08 12:47:44 [SpringApplicationShutdownHook] DEBUG o.s.w.c.s.GenericWebApplicationContext - Closing org.springframework.web.context.support.GenericWebApplicationContext@62054faf, started on Mon Dec 08 12:47:21 IST 2025
+2025-12-08 12:47:45 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-08 12:47:45 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-12-08 12:47:45 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-12-08 12:48:02 [Test worker] INFO  c.s.i.MemberControllerIntegrationTest - Starting MemberControllerIntegrationTest using Java 17.0.17 with PID 22488 (started by SaraswatiHiremath in C:\Users\SaraswatiHiremath\Downloads\surest_member_management\surest_member_management)
+2025-12-08 12:48:02 [Test worker] DEBUG c.s.i.MemberControllerIntegrationTest - Running with Spring Boot v3.5.7, Spring v6.2.12
+2025-12-08 12:48:02 [Test worker] INFO  c.s.i.MemberControllerIntegrationTest - No active profile set, falling back to 1 default profile: "default"
+2025-12-08 12:48:02 [Test worker] DEBUG o.s.w.c.s.GenericWebApplicationContext - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@62054faf
+2025-12-08 12:48:05 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-12-08 12:48:05 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-08 12:48:07 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 1470 ms. Found 2 JPA repository interfaces.
+2025-12-08 12:48:07 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-12-08 12:48:07 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-12-08 12:48:07 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.surest.repository.MemberRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-12-08 12:48:07 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.surest.repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-12-08 12:48:07 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 29 ms. Found 0 Redis repository interfaces.
+2025-12-08 12:48:15 [Test worker] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-08 12:48:17 [Test worker] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2befecc
+2025-12-08 12:48:17 [Test worker] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-08 12:48:17 [Test worker] INFO  org.flywaydb.core.FlywayExecutor - Database: jdbc:postgresql://localhost:5432/surest_db (PostgreSQL 18.1)
+2025-12-08 12:48:17 [Test worker] WARN  o.f.c.i.database.base.Database - Flyway upgrade recommended: PostgreSQL 18.1 is newer than this version of Flyway and support has not been tested. The latest supported version of PostgreSQL is 17.
+2025-12-08 12:48:17 [Test worker] INFO  o.f.core.internal.command.DbValidate - Successfully validated 2 migrations (execution time 00:00.135s)
+2025-12-08 12:48:17 [Test worker] INFO  o.f.core.internal.command.DbMigrate - Current version of schema "public": 2
+2025-12-08 12:48:17 [Test worker] INFO  o.f.core.internal.command.DbMigrate - Schema "public" is up to date. No migration necessary.
+2025-12-08 12:48:18 [Test worker] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-08 12:48:18 [Test worker] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.33.Final
+2025-12-08 12:48:18 [Test worker] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-12-08 12:48:19 [Test worker] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-08 12:48:19 [Test worker] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 18.1
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-12-08 12:48:22 [Test worker] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-08 12:48:22 [Test worker] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-08 12:48:23 [Test worker] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsServiceImpl
+2025-12-08 12:48:24 [Test worker] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-08 12:48:24 [Test worker] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 12 mappings in 'requestMappingHandlerMapping'
+2025-12-08 12:48:25 [Test worker] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2025-12-08 12:48:26 [Test worker] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-12-08 12:48:26 [Test worker] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-12-08 12:48:27 [Test worker] DEBUG c.surest.security.JwtRequestFilter - Filter 'jwtRequestFilter' configured for use
+2025-12-08 12:48:27 [Test worker] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-12-08 12:48:27 [Test worker] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-12-08 12:48:27 [Test worker] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 3 ms
+2025-12-08 12:48:27 [Test worker] INFO  c.s.i.MemberControllerIntegrationTest - Started MemberControllerIntegrationTest in 26.721 seconds (process running for 32.039)
+2025-12-08 12:48:27 [Test worker] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.surest.controller.MemberController#createMember(MemberDTO)
+2025-12-08 12:48:28 [Test worker] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [MemberDTO(id=null, firstName=John, lastName=Doe, dateOfBirth=1990-01-01, email=john.doe@example.com)]
+2025-12-08 12:48:28 [Test worker] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2025-12-08 12:48:28 [Test worker] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [MemberDTO(id=08212e2d-2563-4209-bae0-7e954c0f6202, firstName=John, lastName=Doe, dateOfBirth=1990-01 (truncated)...]
+2025-12-08 12:48:28 [SpringApplicationShutdownHook] DEBUG o.s.w.c.s.GenericWebApplicationContext - Closing org.springframework.web.context.support.GenericWebApplicationContext@62054faf, started on Mon Dec 08 12:48:02 IST 2025
+2025-12-08 12:48:28 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-08 12:48:28 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-12-08 12:48:28 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-12-08 12:48:46 [Test worker] INFO  c.s.i.MemberControllerIntegrationTest - Starting MemberControllerIntegrationTest using Java 17.0.17 with PID 15984 (started by SaraswatiHiremath in C:\Users\SaraswatiHiremath\Downloads\surest_member_management\surest_member_management)
+2025-12-08 12:48:46 [Test worker] DEBUG c.s.i.MemberControllerIntegrationTest - Running with Spring Boot v3.5.7, Spring v6.2.12
+2025-12-08 12:48:46 [Test worker] INFO  c.s.i.MemberControllerIntegrationTest - No active profile set, falling back to 1 default profile: "default"
+2025-12-08 12:48:46 [Test worker] DEBUG o.s.w.c.s.GenericWebApplicationContext - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@62054faf
+2025-12-08 12:48:49 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-12-08 12:48:49 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-08 12:48:49 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 538 ms. Found 2 JPA repository interfaces.
+2025-12-08 12:48:50 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-12-08 12:48:50 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-12-08 12:48:50 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.surest.repository.MemberRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-12-08 12:48:50 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.surest.repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-12-08 12:48:50 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 19 ms. Found 0 Redis repository interfaces.
+2025-12-08 12:48:57 [Test worker] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-08 12:48:58 [Test worker] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@3d9cbe5d
+2025-12-08 12:48:58 [Test worker] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-08 12:48:58 [Test worker] INFO  org.flywaydb.core.FlywayExecutor - Database: jdbc:postgresql://localhost:5432/surest_db (PostgreSQL 18.1)
+2025-12-08 12:48:58 [Test worker] WARN  o.f.c.i.database.base.Database - Flyway upgrade recommended: PostgreSQL 18.1 is newer than this version of Flyway and support has not been tested. The latest supported version of PostgreSQL is 17.
+2025-12-08 12:48:58 [Test worker] INFO  o.f.core.internal.command.DbValidate - Successfully validated 2 migrations (execution time 00:00.119s)
+2025-12-08 12:48:59 [Test worker] INFO  o.f.core.internal.command.DbMigrate - Current version of schema "public": 2
+2025-12-08 12:48:59 [Test worker] INFO  o.f.core.internal.command.DbMigrate - Schema "public" is up to date. No migration necessary.
+2025-12-08 12:48:59 [Test worker] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-08 12:48:59 [Test worker] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.33.Final
+2025-12-08 12:49:00 [Test worker] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-12-08 12:49:00 [Test worker] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-08 12:49:01 [Test worker] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 18.1
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-12-08 12:49:04 [Test worker] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-08 12:49:04 [Test worker] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-08 12:49:05 [Test worker] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsServiceImpl
+2025-12-08 12:49:06 [Test worker] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-08 12:49:06 [Test worker] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 12 mappings in 'requestMappingHandlerMapping'
+2025-12-08 12:49:06 [Test worker] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2025-12-08 12:49:07 [Test worker] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-12-08 12:49:08 [Test worker] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-12-08 12:49:09 [Test worker] DEBUG c.surest.security.JwtRequestFilter - Filter 'jwtRequestFilter' configured for use
+2025-12-08 12:49:09 [Test worker] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-12-08 12:49:09 [Test worker] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-12-08 12:49:09 [Test worker] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 2 ms
+2025-12-08 12:49:09 [Test worker] INFO  c.s.i.MemberControllerIntegrationTest - Started MemberControllerIntegrationTest in 24.299 seconds (process running for 29.229)
+2025-12-08 12:49:09 [Test worker] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.surest.controller.MemberController#updateMember(UUID, MemberDTO)
+2025-12-08 12:49:09 [Test worker] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [MemberDTO(id=null, firstName=Johnny, lastName=Doe, dateOfBirth=1990-01-01, email=john.doe@example.co (truncated)...]
+2025-12-08 12:49:09 [Test worker] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2025-12-08 12:49:09 [Test worker] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [MemberDTO(id=5fd709fe-ab81-4aac-bf4b-50c1c08da0dd, firstName=Johnny, lastName=Doe, dateOfBirth=1990- (truncated)...]
+2025-12-08 12:49:10 [SpringApplicationShutdownHook] DEBUG o.s.w.c.s.GenericWebApplicationContext - Closing org.springframework.web.context.support.GenericWebApplicationContext@62054faf, started on Mon Dec 08 12:48:46 IST 2025
+2025-12-08 12:49:10 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-08 12:49:10 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-12-08 12:49:10 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-12-08 12:49:54 [Test worker] INFO  c.s.i.MemberControllerIntegrationTest - Starting MemberControllerIntegrationTest using Java 17.0.17 with PID 20656 (started by SaraswatiHiremath in C:\Users\SaraswatiHiremath\Downloads\surest_member_management\surest_member_management)
+2025-12-08 12:49:54 [Test worker] DEBUG c.s.i.MemberControllerIntegrationTest - Running with Spring Boot v3.5.7, Spring v6.2.12
+2025-12-08 12:49:54 [Test worker] INFO  c.s.i.MemberControllerIntegrationTest - No active profile set, falling back to 1 default profile: "default"
+2025-12-08 12:49:54 [Test worker] DEBUG o.s.w.c.s.GenericWebApplicationContext - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@62054faf
+2025-12-08 12:49:57 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-12-08 12:49:57 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-08 12:49:58 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 628 ms. Found 2 JPA repository interfaces.
+2025-12-08 12:49:58 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-12-08 12:49:58 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-12-08 12:49:58 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.surest.repository.MemberRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-12-08 12:49:58 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.surest.repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-12-08 12:49:58 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 15 ms. Found 0 Redis repository interfaces.
+2025-12-08 12:50:06 [Test worker] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-08 12:50:07 [Test worker] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@70dd5a12
+2025-12-08 12:50:07 [Test worker] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-08 12:50:07 [Test worker] INFO  org.flywaydb.core.FlywayExecutor - Database: jdbc:postgresql://localhost:5432/surest_db (PostgreSQL 18.1)
+2025-12-08 12:50:07 [Test worker] WARN  o.f.c.i.database.base.Database - Flyway upgrade recommended: PostgreSQL 18.1 is newer than this version of Flyway and support has not been tested. The latest supported version of PostgreSQL is 17.
+2025-12-08 12:50:07 [Test worker] INFO  o.f.core.internal.command.DbValidate - Successfully validated 2 migrations (execution time 00:00.136s)
+2025-12-08 12:50:07 [Test worker] INFO  o.f.core.internal.command.DbMigrate - Current version of schema "public": 2
+2025-12-08 12:50:07 [Test worker] INFO  o.f.core.internal.command.DbMigrate - Schema "public" is up to date. No migration necessary.
+2025-12-08 12:50:07 [Test worker] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-08 12:50:08 [Test worker] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.33.Final
+2025-12-08 12:50:08 [Test worker] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-12-08 12:50:08 [Test worker] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-08 12:50:09 [Test worker] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 18.1
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-12-08 12:50:12 [Test worker] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-08 12:50:12 [Test worker] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-08 12:50:13 [Test worker] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsServiceImpl
+2025-12-08 12:50:13 [Test worker] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-08 12:50:14 [Test worker] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 12 mappings in 'requestMappingHandlerMapping'
+2025-12-08 12:50:14 [Test worker] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2025-12-08 12:50:15 [Test worker] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-12-08 12:50:15 [Test worker] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-12-08 12:50:16 [Test worker] DEBUG c.surest.security.JwtRequestFilter - Filter 'jwtRequestFilter' configured for use
+2025-12-08 12:50:16 [Test worker] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-12-08 12:50:16 [Test worker] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-12-08 12:50:16 [Test worker] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 4 ms
+2025-12-08 12:50:16 [Test worker] INFO  c.s.i.MemberControllerIntegrationTest - Started MemberControllerIntegrationTest in 24.081 seconds (process running for 28.037)
+2025-12-08 12:50:17 [Test worker] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.surest.controller.MemberController#deleteMember(UUID)
+2025-12-08 12:50:17 [Test worker] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2025-12-08 12:50:17 [Test worker] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Nothing to write: null body
+2025-12-08 12:50:17 [SpringApplicationShutdownHook] DEBUG o.s.w.c.s.GenericWebApplicationContext - Closing org.springframework.web.context.support.GenericWebApplicationContext@62054faf, started on Mon Dec 08 12:49:54 IST 2025
+2025-12-08 12:50:17 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-08 12:50:17 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-12-08 12:50:17 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-12-08 12:50:33 [Test worker] INFO  c.s.i.MemberControllerIntegrationTest - Starting MemberControllerIntegrationTest using Java 17.0.17 with PID 14560 (started by SaraswatiHiremath in C:\Users\SaraswatiHiremath\Downloads\surest_member_management\surest_member_management)
+2025-12-08 12:50:33 [Test worker] DEBUG c.s.i.MemberControllerIntegrationTest - Running with Spring Boot v3.5.7, Spring v6.2.12
+2025-12-08 12:50:33 [Test worker] INFO  c.s.i.MemberControllerIntegrationTest - No active profile set, falling back to 1 default profile: "default"
+2025-12-08 12:50:33 [Test worker] DEBUG o.s.w.c.s.GenericWebApplicationContext - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@62054faf
+2025-12-08 12:50:37 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-12-08 12:50:37 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-08 12:50:37 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 520 ms. Found 2 JPA repository interfaces.
+2025-12-08 12:50:37 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-12-08 12:50:37 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-12-08 12:50:37 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.surest.repository.MemberRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-12-08 12:50:37 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.surest.repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-12-08 12:50:37 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 17 ms. Found 0 Redis repository interfaces.
+2025-12-08 12:50:44 [Test worker] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-08 12:50:45 [Test worker] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@582b8d30
+2025-12-08 12:50:45 [Test worker] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-08 12:50:45 [Test worker] INFO  org.flywaydb.core.FlywayExecutor - Database: jdbc:postgresql://localhost:5432/surest_db (PostgreSQL 18.1)
+2025-12-08 12:50:45 [Test worker] WARN  o.f.c.i.database.base.Database - Flyway upgrade recommended: PostgreSQL 18.1 is newer than this version of Flyway and support has not been tested. The latest supported version of PostgreSQL is 17.
+2025-12-08 12:50:46 [Test worker] INFO  o.f.core.internal.command.DbValidate - Successfully validated 2 migrations (execution time 00:00.208s)
+2025-12-08 12:50:46 [Test worker] INFO  o.f.core.internal.command.DbMigrate - Current version of schema "public": 2
+2025-12-08 12:50:46 [Test worker] INFO  o.f.core.internal.command.DbMigrate - Schema "public" is up to date. No migration necessary.
+2025-12-08 12:50:46 [Test worker] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-08 12:50:47 [Test worker] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.33.Final
+2025-12-08 12:50:47 [Test worker] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-12-08 12:50:48 [Test worker] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-08 12:50:48 [Test worker] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 18.1
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-12-08 12:50:52 [Test worker] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-08 12:50:52 [Test worker] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-08 12:50:53 [Test worker] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsServiceImpl
+2025-12-08 12:50:54 [Test worker] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-08 12:50:54 [Test worker] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 12 mappings in 'requestMappingHandlerMapping'
+2025-12-08 12:50:54 [Test worker] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2025-12-08 12:50:55 [Test worker] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-12-08 12:50:55 [Test worker] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-12-08 12:50:57 [Test worker] DEBUG c.surest.security.JwtRequestFilter - Filter 'jwtRequestFilter' configured for use
+2025-12-08 12:50:57 [Test worker] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-12-08 12:50:57 [Test worker] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-12-08 12:50:57 [Test worker] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 3 ms
+2025-12-08 12:50:57 [Test worker] INFO  c.s.i.MemberControllerIntegrationTest - Started MemberControllerIntegrationTest in 24.949 seconds (process running for 29.873)
+2025-12-08 12:50:57 [SpringApplicationShutdownHook] DEBUG o.s.w.c.s.GenericWebApplicationContext - Closing org.springframework.web.context.support.GenericWebApplicationContext@62054faf, started on Mon Dec 08 12:50:33 IST 2025
+2025-12-08 12:50:58 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-08 12:50:58 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-12-08 12:50:58 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-12-08 12:52:59 [Test worker] INFO  c.s.i.MemberControllerIntegrationTest - Starting MemberControllerIntegrationTest using Java 17.0.17 with PID 19076 (started by SaraswatiHiremath in C:\Users\SaraswatiHiremath\Downloads\surest_member_management\surest_member_management)
+2025-12-08 12:52:59 [Test worker] DEBUG c.s.i.MemberControllerIntegrationTest - Running with Spring Boot v3.5.7, Spring v6.2.12
+2025-12-08 12:52:59 [Test worker] INFO  c.s.i.MemberControllerIntegrationTest - No active profile set, falling back to 1 default profile: "default"
+2025-12-08 12:52:59 [Test worker] DEBUG o.s.w.c.s.GenericWebApplicationContext - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@62054faf
+2025-12-08 12:53:02 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-12-08 12:53:02 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-08 12:53:02 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 536 ms. Found 2 JPA repository interfaces.
+2025-12-08 12:53:03 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-12-08 12:53:03 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-12-08 12:53:03 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.surest.repository.MemberRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-12-08 12:53:03 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.surest.repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-12-08 12:53:03 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 18 ms. Found 0 Redis repository interfaces.
+2025-12-08 12:53:09 [Test worker] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-08 12:53:10 [Test worker] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@34a86c40
+2025-12-08 12:53:10 [Test worker] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-08 12:53:10 [Test worker] INFO  org.flywaydb.core.FlywayExecutor - Database: jdbc:postgresql://localhost:5432/surest_db (PostgreSQL 18.1)
+2025-12-08 12:53:11 [Test worker] WARN  o.f.c.i.database.base.Database - Flyway upgrade recommended: PostgreSQL 18.1 is newer than this version of Flyway and support has not been tested. The latest supported version of PostgreSQL is 17.
+2025-12-08 12:53:11 [Test worker] INFO  o.f.core.internal.command.DbValidate - Successfully validated 2 migrations (execution time 00:00.293s)
+2025-12-08 12:53:11 [Test worker] INFO  o.f.core.internal.command.DbMigrate - Current version of schema "public": 2
+2025-12-08 12:53:11 [Test worker] INFO  o.f.core.internal.command.DbMigrate - Schema "public" is up to date. No migration necessary.
+2025-12-08 12:53:12 [Test worker] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-08 12:53:12 [Test worker] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.33.Final
+2025-12-08 12:53:13 [Test worker] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-12-08 12:53:13 [Test worker] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-08 12:53:14 [Test worker] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 18.1
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-12-08 12:53:19 [Test worker] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-08 12:53:19 [Test worker] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-08 12:53:21 [Test worker] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsServiceImpl
+2025-12-08 12:53:21 [Test worker] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-08 12:53:22 [Test worker] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 12 mappings in 'requestMappingHandlerMapping'
+2025-12-08 12:53:22 [Test worker] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2025-12-08 12:53:23 [Test worker] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-12-08 12:53:23 [Test worker] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-12-08 12:53:24 [Test worker] DEBUG c.surest.security.JwtRequestFilter - Filter 'jwtRequestFilter' configured for use
+2025-12-08 12:53:24 [Test worker] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-12-08 12:53:24 [Test worker] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-12-08 12:53:24 [Test worker] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 3 ms
+2025-12-08 12:53:24 [Test worker] INFO  c.s.i.MemberControllerIntegrationTest - Started MemberControllerIntegrationTest in 27.403 seconds (process running for 32.435)
+2025-12-08 12:53:25 [SpringApplicationShutdownHook] DEBUG o.s.w.c.s.GenericWebApplicationContext - Closing org.springframework.web.context.support.GenericWebApplicationContext@62054faf, started on Mon Dec 08 12:52:59 IST 2025
+2025-12-08 12:53:25 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-08 12:53:25 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-12-08 12:53:25 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-12-08 13:02:11 [Test worker] INFO  c.s.i.MemberControllerIntegrationTest - Starting MemberControllerIntegrationTest using Java 17.0.17 with PID 27284 (started by SaraswatiHiremath in C:\Users\SaraswatiHiremath\Downloads\surest_member_management\surest_member_management)
+2025-12-08 13:02:11 [Test worker] DEBUG c.s.i.MemberControllerIntegrationTest - Running with Spring Boot v3.5.7, Spring v6.2.12
+2025-12-08 13:02:11 [Test worker] INFO  c.s.i.MemberControllerIntegrationTest - No active profile set, falling back to 1 default profile: "default"
+2025-12-08 13:02:11 [Test worker] DEBUG o.s.w.c.s.GenericWebApplicationContext - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@62054faf
+2025-12-08 13:02:14 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-12-08 13:02:14 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-08 13:02:14 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 548 ms. Found 2 JPA repository interfaces.
+2025-12-08 13:02:14 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-12-08 13:02:14 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-12-08 13:02:14 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.surest.repository.MemberRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-12-08 13:02:14 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.surest.repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-12-08 13:02:14 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 26 ms. Found 0 Redis repository interfaces.
+2025-12-08 13:02:21 [Test worker] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-08 13:02:22 [Test worker] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7fe883a9
+2025-12-08 13:02:22 [Test worker] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-08 13:02:22 [Test worker] INFO  org.flywaydb.core.FlywayExecutor - Database: jdbc:postgresql://localhost:5432/surest_db (PostgreSQL 18.1)
+2025-12-08 13:02:22 [Test worker] WARN  o.f.c.i.database.base.Database - Flyway upgrade recommended: PostgreSQL 18.1 is newer than this version of Flyway and support has not been tested. The latest supported version of PostgreSQL is 17.
+2025-12-08 13:02:22 [Test worker] INFO  o.f.core.internal.command.DbValidate - Successfully validated 2 migrations (execution time 00:00.108s)
+2025-12-08 13:02:22 [Test worker] INFO  o.f.core.internal.command.DbMigrate - Current version of schema "public": 2
+2025-12-08 13:02:22 [Test worker] INFO  o.f.core.internal.command.DbMigrate - Schema "public" is up to date. No migration necessary.
+2025-12-08 13:02:22 [Test worker] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-08 13:02:23 [Test worker] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.33.Final
+2025-12-08 13:02:23 [Test worker] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-12-08 13:02:23 [Test worker] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-08 13:02:24 [Test worker] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 18.1
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-12-08 13:02:27 [Test worker] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-08 13:02:27 [Test worker] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-08 13:02:28 [Test worker] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsServiceImpl
+2025-12-08 13:02:28 [Test worker] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-08 13:02:29 [Test worker] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 12 mappings in 'requestMappingHandlerMapping'
+2025-12-08 13:02:29 [Test worker] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2025-12-08 13:02:30 [Test worker] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-12-08 13:02:30 [Test worker] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-12-08 13:02:31 [Test worker] DEBUG c.surest.security.JwtRequestFilter - Filter 'jwtRequestFilter' configured for use
+2025-12-08 13:02:31 [Test worker] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-12-08 13:02:31 [Test worker] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-12-08 13:02:31 [Test worker] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 3 ms
+2025-12-08 13:02:32 [Test worker] INFO  c.s.i.MemberControllerIntegrationTest - Started MemberControllerIntegrationTest in 21.837 seconds (process running for 24.931)
+2025-12-08 13:02:32 [Test worker] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.surest.controller.MemberController#createMember(MemberDTO)
+2025-12-08 13:02:32 [Test worker] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [MemberDTO(id=null, firstName=John, lastName=Doe, dateOfBirth=1990-01-01, email=john.doe@example.com)]
+2025-12-08 13:02:32 [Test worker] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Using @ExceptionHandler com.surest.exception.GlobalExceptionHandler#handleGeneric(Exception, HttpServletRequest)
+2025-12-08 13:02:32 [Test worker] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2025-12-08 13:02:32 [Test worker] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [ErrorResponse(timestamp=2025-12-08T13:02:32.641918, status=500, error=Internal Server Error, message (truncated)...]
+2025-12-08 13:02:32 [Test worker] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.security.authorization.AuthorizationDeniedException: Access Denied]
+2025-12-08 13:02:32 [SpringApplicationShutdownHook] DEBUG o.s.w.c.s.GenericWebApplicationContext - Closing org.springframework.web.context.support.GenericWebApplicationContext@62054faf, started on Mon Dec 08 13:02:11 IST 2025
+2025-12-08 13:02:33 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-08 13:02:33 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-12-08 13:02:33 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-12-08 13:07:59 [Test worker] INFO  c.s.i.MemberControllerIntegrationTest - Starting MemberControllerIntegrationTest using Java 17.0.17 with PID 27916 (started by SaraswatiHiremath in C:\Users\SaraswatiHiremath\Downloads\surest_member_management\surest_member_management)
+2025-12-08 13:07:59 [Test worker] DEBUG c.s.i.MemberControllerIntegrationTest - Running with Spring Boot v3.5.7, Spring v6.2.12
+2025-12-08 13:07:59 [Test worker] INFO  c.s.i.MemberControllerIntegrationTest - No active profile set, falling back to 1 default profile: "default"
+2025-12-08 13:07:59 [Test worker] DEBUG o.s.w.c.s.GenericWebApplicationContext - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@62054faf
+2025-12-08 13:08:03 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-12-08 13:08:03 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-08 13:08:04 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 873 ms. Found 2 JPA repository interfaces.
+2025-12-08 13:08:04 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-12-08 13:08:04 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-12-08 13:08:05 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.surest.repository.MemberRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-12-08 13:08:05 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.surest.repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-12-08 13:08:05 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 30 ms. Found 0 Redis repository interfaces.
+2025-12-08 13:08:16 [Test worker] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-08 13:08:17 [Test worker] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@57ba665f
+2025-12-08 13:08:17 [Test worker] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-08 13:08:17 [Test worker] INFO  org.flywaydb.core.FlywayExecutor - Database: jdbc:postgresql://localhost:5432/surest_db (PostgreSQL 18.1)
+2025-12-08 13:08:17 [Test worker] WARN  o.f.c.i.database.base.Database - Flyway upgrade recommended: PostgreSQL 18.1 is newer than this version of Flyway and support has not been tested. The latest supported version of PostgreSQL is 17.
+2025-12-08 13:08:18 [Test worker] INFO  o.f.core.internal.command.DbValidate - Successfully validated 2 migrations (execution time 00:00.237s)
+2025-12-08 13:08:18 [Test worker] INFO  o.f.core.internal.command.DbMigrate - Current version of schema "public": 2
+2025-12-08 13:08:18 [Test worker] INFO  o.f.core.internal.command.DbMigrate - Schema "public" is up to date. No migration necessary.
+2025-12-08 13:08:18 [Test worker] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-08 13:08:19 [Test worker] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.33.Final
+2025-12-08 13:08:19 [Test worker] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-12-08 13:08:20 [Test worker] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-08 13:08:21 [Test worker] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 18.1
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-12-08 13:08:27 [Test worker] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-08 13:08:27 [Test worker] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-08 13:08:29 [Test worker] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsServiceImpl
+2025-12-08 13:08:30 [Test worker] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-08 13:08:31 [Test worker] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 12 mappings in 'requestMappingHandlerMapping'
+2025-12-08 13:08:31 [Test worker] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2025-12-08 13:08:33 [Test worker] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-12-08 13:08:33 [Test worker] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-12-08 13:08:35 [Test worker] DEBUG c.surest.security.JwtRequestFilter - Filter 'jwtRequestFilter' configured for use
+2025-12-08 13:08:35 [Test worker] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-12-08 13:08:35 [Test worker] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-12-08 13:08:35 [Test worker] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 5 ms
+2025-12-08 13:08:35 [Test worker] INFO  c.s.i.MemberControllerIntegrationTest - Started MemberControllerIntegrationTest in 38.877 seconds (process running for 51.193)
+2025-12-08 13:08:36 [Test worker] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.surest.controller.MemberController#createMember(MemberDTO)
+2025-12-08 13:08:36 [Test worker] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [MemberDTO(id=null, firstName=John, lastName=Doe, dateOfBirth=1990-01-01, email=john.doe@example.com)]
+2025-12-08 13:08:36 [Test worker] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Using @ExceptionHandler com.surest.exception.GlobalExceptionHandler#handleGeneric(Exception, HttpServletRequest)
+2025-12-08 13:08:36 [Test worker] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2025-12-08 13:08:36 [Test worker] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [ErrorResponse(timestamp=2025-12-08T13:08:36.861402100, status=500, error=Internal Server Error, mess (truncated)...]
+2025-12-08 13:08:36 [Test worker] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.security.authorization.AuthorizationDeniedException: Access Denied]
+2025-12-08 13:08:37 [SpringApplicationShutdownHook] DEBUG o.s.w.c.s.GenericWebApplicationContext - Closing org.springframework.web.context.support.GenericWebApplicationContext@62054faf, started on Mon Dec 08 13:07:59 IST 2025
+2025-12-08 13:08:38 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-08 13:08:38 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-12-08 13:08:38 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-12-08 13:09:52 [Test worker] INFO  c.s.i.MemberControllerIntegrationTest - Starting MemberControllerIntegrationTest using Java 17.0.17 with PID 10792 (started by SaraswatiHiremath in C:\Users\SaraswatiHiremath\Downloads\surest_member_management\surest_member_management)
+2025-12-08 13:09:52 [Test worker] DEBUG c.s.i.MemberControllerIntegrationTest - Running with Spring Boot v3.5.7, Spring v6.2.12
+2025-12-08 13:09:52 [Test worker] INFO  c.s.i.MemberControllerIntegrationTest - No active profile set, falling back to 1 default profile: "default"
+2025-12-08 13:09:52 [Test worker] DEBUG o.s.w.c.s.GenericWebApplicationContext - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@62054faf
+2025-12-08 13:09:56 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-12-08 13:09:56 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-08 13:09:58 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 1251 ms. Found 2 JPA repository interfaces.
+2025-12-08 13:09:58 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-12-08 13:09:58 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-12-08 13:09:58 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.surest.repository.MemberRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-12-08 13:09:58 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.surest.repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-12-08 13:09:58 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 31 ms. Found 0 Redis repository interfaces.
+2025-12-08 13:10:11 [Test worker] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-08 13:10:12 [Test worker] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1acfd193
+2025-12-08 13:10:12 [Test worker] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-08 13:10:13 [Test worker] INFO  org.flywaydb.core.FlywayExecutor - Database: jdbc:postgresql://localhost:5432/surest_db (PostgreSQL 18.1)
+2025-12-08 13:10:13 [Test worker] WARN  o.f.c.i.database.base.Database - Flyway upgrade recommended: PostgreSQL 18.1 is newer than this version of Flyway and support has not been tested. The latest supported version of PostgreSQL is 17.
+2025-12-08 13:10:13 [Test worker] INFO  o.f.core.internal.command.DbValidate - Successfully validated 2 migrations (execution time 00:00.553s)
+2025-12-08 13:10:13 [Test worker] INFO  o.f.core.internal.command.DbMigrate - Current version of schema "public": 2
+2025-12-08 13:10:13 [Test worker] INFO  o.f.core.internal.command.DbMigrate - Schema "public" is up to date. No migration necessary.
+2025-12-08 13:10:14 [Test worker] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-08 13:10:15 [Test worker] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.33.Final
+2025-12-08 13:10:15 [Test worker] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-12-08 13:10:16 [Test worker] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-08 13:10:16 [Test worker] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 18.1
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-12-08 13:10:22 [Test worker] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-08 13:10:22 [Test worker] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-08 13:10:24 [Test worker] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsServiceImpl
+2025-12-08 13:10:24 [Test worker] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-08 13:10:25 [Test worker] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 12 mappings in 'requestMappingHandlerMapping'
+2025-12-08 13:10:26 [Test worker] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2025-12-08 13:10:27 [Test worker] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-12-08 13:10:28 [Test worker] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-12-08 13:10:29 [Test worker] DEBUG c.surest.security.JwtRequestFilter - Filter 'jwtRequestFilter' configured for use
+2025-12-08 13:10:29 [Test worker] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-12-08 13:10:29 [Test worker] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-12-08 13:10:29 [Test worker] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 6 ms
+2025-12-08 13:10:30 [Test worker] INFO  c.s.i.MemberControllerIntegrationTest - Started MemberControllerIntegrationTest in 40.92 seconds (process running for 50.049)
+2025-12-08 13:10:30 [Test worker] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.surest.controller.MemberController#createMember(MemberDTO)
+2025-12-08 13:10:30 [Test worker] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [MemberDTO(id=null, firstName=John, lastName=Doe, dateOfBirth=1990-01-01, email=john.doe@example.com)]
+2025-12-08 13:10:30 [Test worker] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Using @ExceptionHandler com.surest.exception.GlobalExceptionHandler#handleGeneric(Exception, HttpServletRequest)
+2025-12-08 13:10:30 [Test worker] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2025-12-08 13:10:30 [Test worker] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [ErrorResponse(timestamp=2025-12-08T13:10:30.780667900, status=500, error=Internal Server Error, mess (truncated)...]
+2025-12-08 13:10:30 [Test worker] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.security.authorization.AuthorizationDeniedException: Access Denied]
+2025-12-08 13:10:31 [SpringApplicationShutdownHook] DEBUG o.s.w.c.s.GenericWebApplicationContext - Closing org.springframework.web.context.support.GenericWebApplicationContext@62054faf, started on Mon Dec 08 13:09:52 IST 2025
+2025-12-08 13:10:31 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-08 13:10:31 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-12-08 13:10:31 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-12-08 13:13:08 [Test worker] INFO  c.s.i.MemberControllerIntegrationTest - Starting MemberControllerIntegrationTest using Java 17.0.17 with PID 24408 (started by SaraswatiHiremath in C:\Users\SaraswatiHiremath\Downloads\surest_member_management\surest_member_management)
+2025-12-08 13:13:08 [Test worker] DEBUG c.s.i.MemberControllerIntegrationTest - Running with Spring Boot v3.5.7, Spring v6.2.12
+2025-12-08 13:13:08 [Test worker] INFO  c.s.i.MemberControllerIntegrationTest - No active profile set, falling back to 1 default profile: "default"
+2025-12-08 13:13:08 [Test worker] DEBUG o.s.w.c.s.GenericWebApplicationContext - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@62054faf
+2025-12-08 13:13:13 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-12-08 13:13:13 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-08 13:13:14 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 727 ms. Found 2 JPA repository interfaces.
+2025-12-08 13:13:14 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-12-08 13:13:14 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-12-08 13:13:14 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.surest.repository.MemberRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-12-08 13:13:14 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.surest.repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-12-08 13:13:14 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 27 ms. Found 0 Redis repository interfaces.
+2025-12-08 13:13:25 [Test worker] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-08 13:13:26 [Test worker] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@585f319e
+2025-12-08 13:13:26 [Test worker] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-08 13:13:26 [Test worker] INFO  org.flywaydb.core.FlywayExecutor - Database: jdbc:postgresql://localhost:5432/surest_db (PostgreSQL 18.1)
+2025-12-08 13:13:26 [Test worker] WARN  o.f.c.i.database.base.Database - Flyway upgrade recommended: PostgreSQL 18.1 is newer than this version of Flyway and support has not been tested. The latest supported version of PostgreSQL is 17.
+2025-12-08 13:13:27 [Test worker] INFO  o.f.core.internal.command.DbValidate - Successfully validated 2 migrations (execution time 00:00.169s)
+2025-12-08 13:13:27 [Test worker] INFO  o.f.core.internal.command.DbMigrate - Current version of schema "public": 2
+2025-12-08 13:13:27 [Test worker] INFO  o.f.core.internal.command.DbMigrate - Schema "public" is up to date. No migration necessary.
+2025-12-08 13:13:27 [Test worker] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-08 13:13:28 [Test worker] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.33.Final
+2025-12-08 13:13:28 [Test worker] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-12-08 13:13:29 [Test worker] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-08 13:13:29 [Test worker] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 18.1
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-12-08 13:13:34 [Test worker] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-08 13:13:34 [Test worker] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-08 13:13:36 [Test worker] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsServiceImpl
+2025-12-08 13:13:37 [Test worker] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-08 13:13:37 [Test worker] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 12 mappings in 'requestMappingHandlerMapping'
+2025-12-08 13:13:38 [Test worker] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2025-12-08 13:13:39 [Test worker] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-12-08 13:13:39 [Test worker] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-12-08 13:13:41 [Test worker] DEBUG c.surest.security.JwtRequestFilter - Filter 'jwtRequestFilter' configured for use
+2025-12-08 13:13:41 [Test worker] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-12-08 13:13:41 [Test worker] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-12-08 13:13:41 [Test worker] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 5 ms
+2025-12-08 13:13:41 [Test worker] INFO  c.s.i.MemberControllerIntegrationTest - Started MemberControllerIntegrationTest in 35.045 seconds (process running for 43.006)
+2025-12-08 13:13:41 [Test worker] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.surest.controller.MemberController#createMember(MemberDTO)
+2025-12-08 13:13:42 [Test worker] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [MemberDTO(id=null, firstName=John, lastName=Doe, dateOfBirth=1990-01-01, email=john.doe@example.com)]
+2025-12-08 13:13:42 [Test worker] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Using @ExceptionHandler com.surest.exception.GlobalExceptionHandler#handleGeneric(Exception, HttpServletRequest)
+2025-12-08 13:13:42 [Test worker] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2025-12-08 13:13:42 [Test worker] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [ErrorResponse(timestamp=2025-12-08T13:13:42.291590600, status=500, error=Internal Server Error, mess (truncated)...]
+2025-12-08 13:13:42 [Test worker] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.security.authorization.AuthorizationDeniedException: Access Denied]
+2025-12-08 13:13:42 [SpringApplicationShutdownHook] DEBUG o.s.w.c.s.GenericWebApplicationContext - Closing org.springframework.web.context.support.GenericWebApplicationContext@62054faf, started on Mon Dec 08 13:13:08 IST 2025
+2025-12-08 13:13:43 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-08 13:13:43 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-12-08 13:13:43 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-12-08 13:14:22 [Test worker] INFO  c.s.i.MemberControllerIntegrationTest - Starting MemberControllerIntegrationTest using Java 17.0.17 with PID 13888 (started by SaraswatiHiremath in C:\Users\SaraswatiHiremath\Downloads\surest_member_management\surest_member_management)
+2025-12-08 13:14:22 [Test worker] DEBUG c.s.i.MemberControllerIntegrationTest - Running with Spring Boot v3.5.7, Spring v6.2.12
+2025-12-08 13:14:22 [Test worker] INFO  c.s.i.MemberControllerIntegrationTest - No active profile set, falling back to 1 default profile: "default"
+2025-12-08 13:14:22 [Test worker] DEBUG o.s.w.c.s.GenericWebApplicationContext - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@62054faf
+2025-12-08 13:14:25 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-12-08 13:14:25 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-08 13:14:26 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 648 ms. Found 2 JPA repository interfaces.
+2025-12-08 13:14:26 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-12-08 13:14:26 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-12-08 13:14:26 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.surest.repository.MemberRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-12-08 13:14:26 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.surest.repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-12-08 13:14:26 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 23 ms. Found 0 Redis repository interfaces.
+2025-12-08 13:14:36 [Test worker] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-08 13:14:38 [Test worker] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1e43d40b
+2025-12-08 13:14:38 [Test worker] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-08 13:14:38 [Test worker] INFO  org.flywaydb.core.FlywayExecutor - Database: jdbc:postgresql://localhost:5432/surest_db (PostgreSQL 18.1)
+2025-12-08 13:14:38 [Test worker] WARN  o.f.c.i.database.base.Database - Flyway upgrade recommended: PostgreSQL 18.1 is newer than this version of Flyway and support has not been tested. The latest supported version of PostgreSQL is 17.
+2025-12-08 13:14:38 [Test worker] INFO  o.f.core.internal.command.DbValidate - Successfully validated 2 migrations (execution time 00:00.178s)
+2025-12-08 13:14:38 [Test worker] INFO  o.f.core.internal.command.DbMigrate - Current version of schema "public": 2
+2025-12-08 13:14:38 [Test worker] INFO  o.f.core.internal.command.DbMigrate - Schema "public" is up to date. No migration necessary.
+2025-12-08 13:14:39 [Test worker] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-08 13:14:40 [Test worker] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.33.Final
+2025-12-08 13:14:40 [Test worker] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-12-08 13:14:41 [Test worker] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-08 13:14:42 [Test worker] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 18.1
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-12-08 13:14:46 [Test worker] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-08 13:14:47 [Test worker] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-08 13:14:48 [Test worker] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsServiceImpl
+2025-12-08 13:14:49 [Test worker] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-08 13:14:50 [Test worker] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 12 mappings in 'requestMappingHandlerMapping'
+2025-12-08 13:14:50 [Test worker] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2025-12-08 13:14:51 [Test worker] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-12-08 13:14:52 [Test worker] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-12-08 13:14:54 [Test worker] DEBUG c.surest.security.JwtRequestFilter - Filter 'jwtRequestFilter' configured for use
+2025-12-08 13:14:54 [Test worker] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-12-08 13:14:54 [Test worker] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-12-08 13:14:54 [Test worker] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 6 ms
+2025-12-08 13:14:54 [Test worker] INFO  c.s.i.MemberControllerIntegrationTest - Started MemberControllerIntegrationTest in 34.008 seconds (process running for 40.536)
+2025-12-08 13:14:54 [Test worker] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.surest.controller.MemberController#getMemberById(UUID)
+2025-12-08 13:14:54 [Test worker] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Using @ExceptionHandler com.surest.exception.GlobalExceptionHandler#handleMemberNotFound(MemberNotFoundException, HttpServletRequest)
+2025-12-08 13:14:54 [Test worker] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2025-12-08 13:14:54 [Test worker] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [ErrorResponse(timestamp=2025-12-08T13:14:54.711683800, status=404, error=Not Found, message=Member n (truncated)...]
+2025-12-08 13:14:54 [Test worker] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.surest.exception.MemberNotFoundException: Member not found with Id: d4e94ccc-efe8-4d86-a077-dad8fe747b04]
+2025-12-08 13:14:55 [SpringApplicationShutdownHook] DEBUG o.s.w.c.s.GenericWebApplicationContext - Closing org.springframework.web.context.support.GenericWebApplicationContext@62054faf, started on Mon Dec 08 13:14:22 IST 2025
+2025-12-08 13:14:55 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-08 13:14:55 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-12-08 13:14:55 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-12-08 13:15:38 [Test worker] INFO  c.s.i.MemberControllerIntegrationTest - Starting MemberControllerIntegrationTest using Java 17.0.17 with PID 28460 (started by SaraswatiHiremath in C:\Users\SaraswatiHiremath\Downloads\surest_member_management\surest_member_management)
+2025-12-08 13:15:38 [Test worker] DEBUG c.s.i.MemberControllerIntegrationTest - Running with Spring Boot v3.5.7, Spring v6.2.12
+2025-12-08 13:15:38 [Test worker] INFO  c.s.i.MemberControllerIntegrationTest - No active profile set, falling back to 1 default profile: "default"
+2025-12-08 13:15:38 [Test worker] DEBUG o.s.w.c.s.GenericWebApplicationContext - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@62054faf
+2025-12-08 13:15:42 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-12-08 13:15:42 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-08 13:15:43 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 730 ms. Found 2 JPA repository interfaces.
+2025-12-08 13:15:43 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-12-08 13:15:43 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-12-08 13:15:43 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.surest.repository.MemberRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-12-08 13:15:43 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.surest.repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-12-08 13:15:43 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 26 ms. Found 0 Redis repository interfaces.
+2025-12-08 13:15:54 [Test worker] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-08 13:15:55 [Test worker] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5fd6cf33
+2025-12-08 13:15:55 [Test worker] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-08 13:15:55 [Test worker] INFO  org.flywaydb.core.FlywayExecutor - Database: jdbc:postgresql://localhost:5432/surest_db (PostgreSQL 18.1)
+2025-12-08 13:15:55 [Test worker] WARN  o.f.c.i.database.base.Database - Flyway upgrade recommended: PostgreSQL 18.1 is newer than this version of Flyway and support has not been tested. The latest supported version of PostgreSQL is 17.
+2025-12-08 13:15:56 [Test worker] INFO  o.f.core.internal.command.DbValidate - Successfully validated 2 migrations (execution time 00:00.151s)
+2025-12-08 13:15:56 [Test worker] INFO  o.f.core.internal.command.DbMigrate - Current version of schema "public": 2
+2025-12-08 13:15:56 [Test worker] INFO  o.f.core.internal.command.DbMigrate - Schema "public" is up to date. No migration necessary.
+2025-12-08 13:15:56 [Test worker] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-08 13:15:57 [Test worker] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.33.Final
+2025-12-08 13:15:57 [Test worker] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-12-08 13:15:58 [Test worker] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-08 13:15:58 [Test worker] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 18.1
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-12-08 13:16:04 [Test worker] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-08 13:16:04 [Test worker] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-08 13:16:06 [Test worker] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsServiceImpl
+2025-12-08 13:16:07 [Test worker] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-08 13:16:08 [Test worker] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 12 mappings in 'requestMappingHandlerMapping'
+2025-12-08 13:16:08 [Test worker] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2025-12-08 13:16:10 [Test worker] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-12-08 13:16:10 [Test worker] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-12-08 13:16:12 [Test worker] DEBUG c.surest.security.JwtRequestFilter - Filter 'jwtRequestFilter' configured for use
+2025-12-08 13:16:12 [Test worker] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-12-08 13:16:12 [Test worker] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-12-08 13:16:12 [Test worker] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 5 ms
+2025-12-08 13:16:12 [Test worker] INFO  c.s.i.MemberControllerIntegrationTest - Started MemberControllerIntegrationTest in 35.913 seconds (process running for 42.897)
+2025-12-08 13:16:13 [Test worker] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.surest.controller.MemberController#getMemberById(UUID)
+2025-12-08 13:16:13 [Test worker] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Using @ExceptionHandler com.surest.exception.GlobalExceptionHandler#handleMemberNotFound(MemberNotFoundException, HttpServletRequest)
+2025-12-08 13:16:13 [Test worker] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2025-12-08 13:16:13 [Test worker] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [ErrorResponse(timestamp=2025-12-08T13:16:13.315743900, status=404, error=Not Found, message=Member n (truncated)...]
+2025-12-08 13:16:13 [Test worker] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.surest.exception.MemberNotFoundException: Member not found with Id: 2e79206f-bf9a-450c-ae79-0de4e1c94f69]
+2025-12-08 13:16:13 [SpringApplicationShutdownHook] DEBUG o.s.w.c.s.GenericWebApplicationContext - Closing org.springframework.web.context.support.GenericWebApplicationContext@62054faf, started on Mon Dec 08 13:15:38 IST 2025
+2025-12-08 13:16:14 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-08 13:16:14 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-12-08 13:16:14 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-12-08 13:16:41 [Test worker] INFO  c.s.i.MemberControllerIntegrationTest - Starting MemberControllerIntegrationTest using Java 17.0.17 with PID 20860 (started by SaraswatiHiremath in C:\Users\SaraswatiHiremath\Downloads\surest_member_management\surest_member_management)
+2025-12-08 13:16:41 [Test worker] DEBUG c.s.i.MemberControllerIntegrationTest - Running with Spring Boot v3.5.7, Spring v6.2.12
+2025-12-08 13:16:41 [Test worker] INFO  c.s.i.MemberControllerIntegrationTest - No active profile set, falling back to 1 default profile: "default"
+2025-12-08 13:16:41 [Test worker] DEBUG o.s.w.c.s.GenericWebApplicationContext - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@62054faf
+2025-12-08 13:16:46 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-12-08 13:16:46 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-08 13:16:47 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 844 ms. Found 2 JPA repository interfaces.
+2025-12-08 13:16:47 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-12-08 13:16:47 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-12-08 13:16:47 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.surest.repository.MemberRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-12-08 13:16:47 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.surest.repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-12-08 13:16:47 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 29 ms. Found 0 Redis repository interfaces.
+2025-12-08 13:16:59 [Test worker] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-08 13:17:00 [Test worker] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1e43d40b
+2025-12-08 13:17:00 [Test worker] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-08 13:17:01 [Test worker] INFO  org.flywaydb.core.FlywayExecutor - Database: jdbc:postgresql://localhost:5432/surest_db (PostgreSQL 18.1)
+2025-12-08 13:17:01 [Test worker] WARN  o.f.c.i.database.base.Database - Flyway upgrade recommended: PostgreSQL 18.1 is newer than this version of Flyway and support has not been tested. The latest supported version of PostgreSQL is 17.
+2025-12-08 13:17:01 [Test worker] INFO  o.f.core.internal.command.DbValidate - Successfully validated 2 migrations (execution time 00:00.314s)
+2025-12-08 13:17:02 [Test worker] INFO  o.f.core.internal.command.DbMigrate - Current version of schema "public": 2
+2025-12-08 13:17:02 [Test worker] INFO  o.f.core.internal.command.DbMigrate - Schema "public" is up to date. No migration necessary.
+2025-12-08 13:17:03 [Test worker] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-08 13:17:03 [Test worker] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.33.Final
+2025-12-08 13:17:03 [Test worker] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-12-08 13:17:05 [Test worker] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-08 13:17:06 [Test worker] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 18.1
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-12-08 13:17:11 [Test worker] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-08 13:17:11 [Test worker] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-08 13:17:13 [Test worker] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsServiceImpl
+2025-12-08 13:17:14 [Test worker] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-08 13:17:15 [Test worker] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 12 mappings in 'requestMappingHandlerMapping'
+2025-12-08 13:17:15 [Test worker] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2025-12-08 13:17:18 [Test worker] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-12-08 13:17:18 [Test worker] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-12-08 13:17:20 [Test worker] DEBUG c.surest.security.JwtRequestFilter - Filter 'jwtRequestFilter' configured for use
+2025-12-08 13:17:20 [Test worker] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-12-08 13:17:20 [Test worker] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-12-08 13:17:20 [Test worker] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 3 ms
+2025-12-08 13:17:20 [Test worker] INFO  c.s.i.MemberControllerIntegrationTest - Started MemberControllerIntegrationTest in 40.797 seconds (process running for 48.754)
+2025-12-08 13:17:20 [Test worker] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.surest.controller.MemberController#createMember(MemberDTO)
+2025-12-08 13:17:20 [Test worker] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [MemberDTO(id=null, firstName=John, lastName=Doe, dateOfBirth=1990-01-01, email=john.doe@example.com)]
+2025-12-08 13:17:21 [Test worker] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Using @ExceptionHandler com.surest.exception.GlobalExceptionHandler#handleMemberExists(MemberAlreadyExistsException, HttpServletRequest)
+2025-12-08 13:17:21 [Test worker] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2025-12-08 13:17:21 [Test worker] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [ErrorResponse(timestamp=2025-12-08T13:17:21.209024200, status=409, error=Conflict, message=Member al (truncated)...]
+2025-12-08 13:17:21 [Test worker] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.surest.exception.MemberAlreadyExistsException: Member already exists with email: john.doe@example.com]
+2025-12-08 13:17:21 [SpringApplicationShutdownHook] DEBUG o.s.w.c.s.GenericWebApplicationContext - Closing org.springframework.web.context.support.GenericWebApplicationContext@62054faf, started on Mon Dec 08 13:16:41 IST 2025
+2025-12-08 13:17:22 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-08 13:17:22 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-12-08 13:17:22 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-12-08 13:17:54 [Test worker] INFO  c.s.i.MemberControllerIntegrationTest - Starting MemberControllerIntegrationTest using Java 17.0.17 with PID 28344 (started by SaraswatiHiremath in C:\Users\SaraswatiHiremath\Downloads\surest_member_management\surest_member_management)
+2025-12-08 13:17:54 [Test worker] DEBUG c.s.i.MemberControllerIntegrationTest - Running with Spring Boot v3.5.7, Spring v6.2.12
+2025-12-08 13:17:54 [Test worker] INFO  c.s.i.MemberControllerIntegrationTest - No active profile set, falling back to 1 default profile: "default"
+2025-12-08 13:17:54 [Test worker] DEBUG o.s.w.c.s.GenericWebApplicationContext - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@1ff542a3
+2025-12-08 13:17:59 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-12-08 13:17:59 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-08 13:18:00 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 734 ms. Found 2 JPA repository interfaces.
+2025-12-08 13:18:00 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-12-08 13:18:00 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-12-08 13:18:00 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.surest.repository.MemberRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-12-08 13:18:00 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.surest.repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-12-08 13:18:00 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 39 ms. Found 0 Redis repository interfaces.
+2025-12-08 13:18:17 [Test worker] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-08 13:18:20 [Test worker] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@737f4856
+2025-12-08 13:18:20 [Test worker] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-08 13:18:20 [Test worker] INFO  org.flywaydb.core.FlywayExecutor - Database: jdbc:postgresql://localhost:5432/surest_db (PostgreSQL 18.1)
+2025-12-08 13:18:20 [Test worker] WARN  o.f.c.i.database.base.Database - Flyway upgrade recommended: PostgreSQL 18.1 is newer than this version of Flyway and support has not been tested. The latest supported version of PostgreSQL is 17.
+2025-12-08 13:18:21 [Test worker] INFO  o.f.core.internal.command.DbValidate - Successfully validated 2 migrations (execution time 00:00.323s)
+2025-12-08 13:18:22 [Test worker] INFO  o.f.core.internal.command.DbMigrate - Current version of schema "public": 2
+2025-12-08 13:18:22 [Test worker] INFO  o.f.core.internal.command.DbMigrate - Schema "public" is up to date. No migration necessary.
+2025-12-08 13:18:23 [Test worker] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-08 13:18:23 [Test worker] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.33.Final
+2025-12-08 13:18:24 [Test worker] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-12-08 13:18:26 [Test worker] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-08 13:18:27 [Test worker] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 18.1
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-12-08 13:18:32 [Test worker] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-08 13:18:32 [Test worker] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-08 13:18:34 [Test worker] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsServiceImpl
+2025-12-08 13:18:35 [Test worker] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-08 13:18:35 [Test worker] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 12 mappings in 'requestMappingHandlerMapping'
+2025-12-08 13:18:36 [Test worker] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2025-12-08 13:18:37 [Test worker] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-12-08 13:18:38 [Test worker] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-12-08 13:18:40 [Test worker] DEBUG c.surest.security.JwtRequestFilter - Filter 'jwtRequestFilter' configured for use
+2025-12-08 13:18:40 [Test worker] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-12-08 13:18:40 [Test worker] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-12-08 13:18:40 [Test worker] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 4 ms
+2025-12-08 13:18:41 [Test worker] INFO  c.s.i.MemberControllerIntegrationTest - Started MemberControllerIntegrationTest in 50.497 seconds (process running for 60.43)
+2025-12-08 13:18:41 [Test worker] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.surest.controller.MemberController#createMember(MemberDTO)
+2025-12-08 13:18:42 [Test worker] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [MemberDTO(id=null, firstName=John, lastName=Doe, dateOfBirth=1990-01-01, email=john.doe@example.com)]
+2025-12-08 13:18:42 [Test worker] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Using @ExceptionHandler com.surest.exception.GlobalExceptionHandler#handleMemberExists(MemberAlreadyExistsException, HttpServletRequest)
+2025-12-08 13:18:42 [Test worker] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2025-12-08 13:18:42 [Test worker] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [ErrorResponse(timestamp=2025-12-08T13:18:42.670013600, status=409, error=Conflict, message=Member al (truncated)...]
+2025-12-08 13:18:42 [Test worker] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.surest.exception.MemberAlreadyExistsException: Member already exists with email: john.doe@example.com]
+2025-12-08 13:18:43 [Test worker] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.surest.controller.MemberController#createMember(MemberDTO)
+2025-12-08 13:18:43 [Test worker] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [MemberDTO(id=null, firstName=John, lastName=Doe, dateOfBirth=1990-01-01, email=john.doe@example.com)]
+2025-12-08 13:18:43 [Test worker] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Using @ExceptionHandler com.surest.exception.GlobalExceptionHandler#handleGeneric(Exception, HttpServletRequest)
+2025-12-08 13:18:43 [Test worker] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2025-12-08 13:18:43 [Test worker] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [ErrorResponse(timestamp=2025-12-08T13:18:43.436459400, status=500, error=Internal Server Error, mess (truncated)...]
+2025-12-08 13:18:43 [Test worker] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.security.authorization.AuthorizationDeniedException: Access Denied]
+2025-12-08 13:18:43 [Test worker] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.surest.controller.MemberController#createMember(MemberDTO)
+2025-12-08 13:18:43 [Test worker] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [MemberDTO(id=null, firstName=John, lastName=Doe, dateOfBirth=1990-01-01, email=john.doe@example.com)]
+2025-12-08 13:18:43 [Test worker] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2025-12-08 13:18:43 [Test worker] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [MemberDTO(id=ab61a781-97ba-4613-8afb-d4e599545807, firstName=John, lastName=Doe, dateOfBirth=1990-01 (truncated)...]
+2025-12-08 13:18:43 [Test worker] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.surest.controller.MemberController#getMemberById(UUID)
+2025-12-08 13:18:43 [Test worker] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2025-12-08 13:18:43 [Test worker] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [MemberDTO(id=4caf14dc-4dfd-4753-ac02-0110dd9841cb, firstName=John, lastName=Doe, dateOfBirth=1990-01 (truncated)...]
+2025-12-08 13:18:43 [Test worker] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.surest.controller.MemberController#createMember(MemberDTO)
+2025-12-08 13:18:43 [Test worker] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [MemberDTO(id=null, firstName=, lastName=, dateOfBirth=null, email=not-an-email)]
+2025-12-08 13:18:43 [Test worker] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Using @ExceptionHandler com.surest.exception.GlobalExceptionHandler#handleValidationErrors(MethodArgumentNotValidException, HttpServletRequest)
+2025-12-08 13:18:43 [Test worker] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2025-12-08 13:18:43 [Test worker] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [ErrorResponse(timestamp=2025-12-08T13:18:43.938662800, status=400, error=Bad Request, message=lastNa (truncated)...]
+2025-12-08 13:18:43 [Test worker] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.surest.dto.MemberDTO> com.surest.controller.MemberController.createMember(com.surest.dto.MemberDTO) with 4 errors: [Field error in object 'memberDTO' on field 'lastName': rejected value []; codes [NotBlank.memberDTO.lastName,NotBlank.lastName,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [memberDTO.lastName,lastName]; arguments []; default message [lastName]]; default message [Last name is required]] [Field error in object 'memberDTO' on field 'email': rejected value [not-an-email]; codes [Email.memberDTO.email,Email.email,Email.java.lang.String,Email]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [memberDTO.email,email]; arguments []; default message [email],[Ljakarta.validation.constraints.Pattern$Flag;@622b1a8a,.*]; default message [Email should be valid]] [Field error in object 'memberDTO' on field 'firstName': rejected value []; codes [NotBlank.memberDTO.firstName,NotBlank.firstName,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [memberDTO.firstName,firstName]; arguments []; default message [firstName]]; default message [First name is required]] [Field error in object 'memberDTO' on field 'dateOfBirth': rejected value [null]; codes [NotNull.memberDTO.dateOfBirth,NotNull.dateOfBirth,NotNull.java.time.LocalDate,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [memberDTO.dateOfBirth,dateOfBirth]; arguments []; default message [dateOfBirth]]; default message [Date of birth is required]] ]
+2025-12-08 13:18:44 [Test worker] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.surest.controller.MemberController#getMemberById(UUID)
+2025-12-08 13:18:44 [Test worker] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Using @ExceptionHandler com.surest.exception.GlobalExceptionHandler#handleMemberNotFound(MemberNotFoundException, HttpServletRequest)
+2025-12-08 13:18:44 [Test worker] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2025-12-08 13:18:44 [Test worker] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [ErrorResponse(timestamp=2025-12-08T13:18:44.057166900, status=404, error=Not Found, message=Member n (truncated)...]
+2025-12-08 13:18:44 [Test worker] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.surest.exception.MemberNotFoundException: Member not found with Id: 773cb90c-c30b-42c1-8885-0ea23dfa614d]
+2025-12-08 13:18:44 [Test worker] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.surest.controller.MemberController#deleteMember(UUID)
+2025-12-08 13:18:44 [Test worker] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2025-12-08 13:18:44 [Test worker] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Nothing to write: null body
+2025-12-08 13:18:44 [Test worker] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.surest.controller.MemberController#getAllMembers(int, int, String, String, String)
+2025-12-08 13:18:44 [Test worker] WARN  o.s.d.w.c.SpringDataJacksonConfiguration$PageModule$WarningLoggingModifier - Serializing PageImpl instances as-is is not supported, meaning that there is no guarantee about the stability of the resulting JSON structure!
+	For a stable JSON structure, please use Spring Data's PagedModel (globally via @EnableSpringDataWebSupport(pageSerializationMode = VIA_DTO))
+	or Spring HATEOAS and Spring Data's PagedResourcesAssembler as documented in https://docs.spring.io/spring-data/commons/reference/repositories/core-extensions.html#core.web.pageables.
+
+2025-12-08 13:18:44 [Test worker] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2025-12-08 13:18:44 [Test worker] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [Page 1 of 1 containing com.surest.dto.MemberDTO instances]
+2025-12-08 13:18:44 [Test worker] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.surest.controller.MemberController#updateMember(UUID, MemberDTO)
+2025-12-08 13:18:44 [Test worker] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [MemberDTO(id=null, firstName=Johnny, lastName=Doe, dateOfBirth=1990-01-01, email=john.doe@example.co (truncated)...]
+2025-12-08 13:18:44 [Test worker] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2025-12-08 13:18:44 [Test worker] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [MemberDTO(id=6928bdb2-86de-4d8b-8c15-084ec9d48c1f, firstName=Johnny, lastName=Doe, dateOfBirth=1990- (truncated)...]
+2025-12-08 13:18:44 [SpringApplicationShutdownHook] DEBUG o.s.w.c.s.GenericWebApplicationContext - Closing org.springframework.web.context.support.GenericWebApplicationContext@1ff542a3, started on Mon Dec 08 13:17:54 IST 2025
+2025-12-08 13:18:46 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-08 13:18:46 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-12-08 13:18:46 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-12-08 13:20:35 [Test worker] INFO  c.s.i.MemberControllerIntegrationTest - Starting MemberControllerIntegrationTest using Java 17.0.17 with PID 22308 (started by SaraswatiHiremath in C:\Users\SaraswatiHiremath\Downloads\surest_member_management\surest_member_management)
+2025-12-08 13:20:35 [Test worker] DEBUG c.s.i.MemberControllerIntegrationTest - Running with Spring Boot v3.5.7, Spring v6.2.12
+2025-12-08 13:20:35 [Test worker] INFO  c.s.i.MemberControllerIntegrationTest - No active profile set, falling back to 1 default profile: "default"
+2025-12-08 13:20:35 [Test worker] DEBUG o.s.w.c.s.GenericWebApplicationContext - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@62054faf
+2025-12-08 13:20:40 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-12-08 13:20:40 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-08 13:20:41 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 872 ms. Found 2 JPA repository interfaces.
+2025-12-08 13:20:41 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-12-08 13:20:41 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-12-08 13:20:42 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.surest.repository.MemberRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-12-08 13:20:42 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.surest.repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-12-08 13:20:42 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 62 ms. Found 0 Redis repository interfaces.
+2025-12-08 13:20:54 [Test worker] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-08 13:20:55 [Test worker] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@56d8cf3a
+2025-12-08 13:20:55 [Test worker] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-08 13:20:55 [Test worker] INFO  org.flywaydb.core.FlywayExecutor - Database: jdbc:postgresql://localhost:5432/surest_db (PostgreSQL 18.1)
+2025-12-08 13:20:55 [Test worker] WARN  o.f.c.i.database.base.Database - Flyway upgrade recommended: PostgreSQL 18.1 is newer than this version of Flyway and support has not been tested. The latest supported version of PostgreSQL is 17.
+2025-12-08 13:20:56 [Test worker] INFO  o.f.core.internal.command.DbValidate - Successfully validated 2 migrations (execution time 00:00.477s)
+2025-12-08 13:20:56 [Test worker] INFO  o.f.core.internal.command.DbMigrate - Current version of schema "public": 2
+2025-12-08 13:20:56 [Test worker] INFO  o.f.core.internal.command.DbMigrate - Schema "public" is up to date. No migration necessary.
+2025-12-08 13:20:57 [Test worker] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-08 13:20:57 [Test worker] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.33.Final
+2025-12-08 13:20:57 [Test worker] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-12-08 13:20:59 [Test worker] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-08 13:20:59 [Test worker] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 18.1
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-12-08 13:21:04 [Test worker] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-08 13:21:04 [Test worker] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-08 13:21:06 [Test worker] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsServiceImpl
+2025-12-08 13:21:07 [Test worker] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-08 13:21:07 [Test worker] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 12 mappings in 'requestMappingHandlerMapping'
+2025-12-08 13:21:08 [Test worker] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2025-12-08 13:21:10 [Test worker] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-12-08 13:21:10 [Test worker] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-12-08 13:21:12 [Test worker] DEBUG c.surest.security.JwtRequestFilter - Filter 'jwtRequestFilter' configured for use
+2025-12-08 13:21:12 [Test worker] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-12-08 13:21:12 [Test worker] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-12-08 13:21:12 [Test worker] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 4 ms
+2025-12-08 13:21:12 [Test worker] INFO  c.s.i.MemberControllerIntegrationTest - Started MemberControllerIntegrationTest in 39.999 seconds (process running for 47.316)
+2025-12-08 13:21:13 [SpringApplicationShutdownHook] DEBUG o.s.w.c.s.GenericWebApplicationContext - Closing org.springframework.web.context.support.GenericWebApplicationContext@62054faf, started on Mon Dec 08 13:20:35 IST 2025
+2025-12-08 13:21:14 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-08 13:21:14 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-12-08 13:21:14 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-12-08 13:23:35 [Test worker] INFO  c.s.i.MemberControllerIntegrationTest - Starting MemberControllerIntegrationTest using Java 17.0.17 with PID 19452 (started by SaraswatiHiremath in C:\Users\SaraswatiHiremath\Downloads\surest_member_management\surest_member_management)
+2025-12-08 13:23:35 [Test worker] DEBUG c.s.i.MemberControllerIntegrationTest - Running with Spring Boot v3.5.7, Spring v6.2.12
+2025-12-08 13:23:35 [Test worker] INFO  c.s.i.MemberControllerIntegrationTest - No active profile set, falling back to 1 default profile: "default"
+2025-12-08 13:23:35 [Test worker] DEBUG o.s.w.c.s.GenericWebApplicationContext - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@62054faf
+2025-12-08 13:23:40 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-12-08 13:23:40 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-08 13:23:41 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 957 ms. Found 2 JPA repository interfaces.
+2025-12-08 13:23:41 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-12-08 13:23:41 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-12-08 13:23:41 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.surest.repository.MemberRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-12-08 13:23:41 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.surest.repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-12-08 13:23:41 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 26 ms. Found 0 Redis repository interfaces.
+2025-12-08 13:23:53 [Test worker] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-08 13:23:54 [Test worker] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@34a86c40
+2025-12-08 13:23:54 [Test worker] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-08 13:23:55 [Test worker] INFO  org.flywaydb.core.FlywayExecutor - Database: jdbc:postgresql://localhost:5432/surest_db (PostgreSQL 18.1)
+2025-12-08 13:23:55 [Test worker] WARN  o.f.c.i.database.base.Database - Flyway upgrade recommended: PostgreSQL 18.1 is newer than this version of Flyway and support has not been tested. The latest supported version of PostgreSQL is 17.
+2025-12-08 13:23:55 [Test worker] INFO  o.f.core.internal.command.DbValidate - Successfully validated 2 migrations (execution time 00:00.189s)
+2025-12-08 13:23:55 [Test worker] INFO  o.f.core.internal.command.DbMigrate - Current version of schema "public": 2
+2025-12-08 13:23:55 [Test worker] INFO  o.f.core.internal.command.DbMigrate - Schema "public" is up to date. No migration necessary.
+2025-12-08 13:23:56 [Test worker] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-08 13:23:56 [Test worker] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.33.Final
+2025-12-08 13:23:57 [Test worker] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-12-08 13:23:58 [Test worker] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-08 13:23:58 [Test worker] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 18.1
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-12-08 13:24:04 [Test worker] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-08 13:24:04 [Test worker] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-08 13:24:06 [Test worker] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsServiceImpl
+2025-12-08 13:24:07 [Test worker] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-08 13:24:08 [Test worker] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 12 mappings in 'requestMappingHandlerMapping'
+2025-12-08 13:24:09 [Test worker] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2025-12-08 13:24:10 [Test worker] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-12-08 13:24:10 [Test worker] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-12-08 13:24:13 [Test worker] DEBUG c.surest.security.JwtRequestFilter - Filter 'jwtRequestFilter' configured for use
+2025-12-08 13:24:13 [Test worker] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-12-08 13:24:13 [Test worker] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-12-08 13:24:13 [Test worker] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 3 ms
+2025-12-08 13:24:13 [Test worker] INFO  c.s.i.MemberControllerIntegrationTest - Started MemberControllerIntegrationTest in 39.588 seconds (process running for 47.104)
+2025-12-08 13:24:13 [SpringApplicationShutdownHook] DEBUG o.s.w.c.s.GenericWebApplicationContext - Closing org.springframework.web.context.support.GenericWebApplicationContext@62054faf, started on Mon Dec 08 13:23:35 IST 2025
+2025-12-08 13:24:14 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-08 13:24:14 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-12-08 13:24:14 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-12-08 13:24:43 [Test worker] INFO  c.s.i.MemberControllerIntegrationTest - Starting MemberControllerIntegrationTest using Java 17.0.17 with PID 24836 (started by SaraswatiHiremath in C:\Users\SaraswatiHiremath\Downloads\surest_member_management\surest_member_management)
+2025-12-08 13:24:43 [Test worker] DEBUG c.s.i.MemberControllerIntegrationTest - Running with Spring Boot v3.5.7, Spring v6.2.12
+2025-12-08 13:24:43 [Test worker] INFO  c.s.i.MemberControllerIntegrationTest - No active profile set, falling back to 1 default profile: "default"
+2025-12-08 13:24:43 [Test worker] DEBUG o.s.w.c.s.GenericWebApplicationContext - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@62054faf
+2025-12-08 13:24:48 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-12-08 13:24:48 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-08 13:24:49 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 909 ms. Found 2 JPA repository interfaces.
+2025-12-08 13:24:49 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-12-08 13:24:49 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-12-08 13:24:49 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.surest.repository.MemberRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-12-08 13:24:49 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.surest.repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-12-08 13:24:49 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 27 ms. Found 0 Redis repository interfaces.
+2025-12-08 13:24:59 [Test worker] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-08 13:25:00 [Test worker] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@507147ce
+2025-12-08 13:25:00 [Test worker] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-08 13:25:00 [Test worker] INFO  org.flywaydb.core.FlywayExecutor - Database: jdbc:postgresql://localhost:5432/surest_db (PostgreSQL 18.1)
+2025-12-08 13:25:00 [Test worker] WARN  o.f.c.i.database.base.Database - Flyway upgrade recommended: PostgreSQL 18.1 is newer than this version of Flyway and support has not been tested. The latest supported version of PostgreSQL is 17.
+2025-12-08 13:25:00 [Test worker] INFO  o.f.core.internal.command.DbValidate - Successfully validated 2 migrations (execution time 00:00.189s)
+2025-12-08 13:25:00 [Test worker] INFO  o.f.core.internal.command.DbMigrate - Current version of schema "public": 2
+2025-12-08 13:25:00 [Test worker] INFO  o.f.core.internal.command.DbMigrate - Schema "public" is up to date. No migration necessary.
+2025-12-08 13:25:01 [Test worker] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-08 13:25:01 [Test worker] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.33.Final
+2025-12-08 13:25:01 [Test worker] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-12-08 13:25:02 [Test worker] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-08 13:25:03 [Test worker] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 18.1
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-12-08 13:25:08 [Test worker] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-08 13:25:08 [Test worker] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-08 13:25:10 [Test worker] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsServiceImpl
+2025-12-08 13:25:10 [Test worker] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-08 13:25:11 [Test worker] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 12 mappings in 'requestMappingHandlerMapping'
+2025-12-08 13:25:11 [Test worker] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2025-12-08 13:25:13 [Test worker] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-12-08 13:25:13 [Test worker] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-12-08 13:25:14 [Test worker] DEBUG c.surest.security.JwtRequestFilter - Filter 'jwtRequestFilter' configured for use
+2025-12-08 13:25:14 [Test worker] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-12-08 13:25:14 [Test worker] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-12-08 13:25:14 [Test worker] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 3 ms
+2025-12-08 13:25:15 [Test worker] INFO  c.s.i.MemberControllerIntegrationTest - Started MemberControllerIntegrationTest in 33.747 seconds (process running for 44.822)
+2025-12-08 13:25:15 [Test worker] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.surest.controller.MemberController#createMember(MemberDTO)
+2025-12-08 13:25:15 [Test worker] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [MemberDTO(id=null, firstName=John, lastName=Doe, dateOfBirth=1990-01-01, email=john.doe@example.com)]
+2025-12-08 13:25:15 [Test worker] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Using @ExceptionHandler com.surest.exception.GlobalExceptionHandler#handleGeneric(Exception, HttpServletRequest)
+2025-12-08 13:25:15 [Test worker] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2025-12-08 13:25:16 [Test worker] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [ErrorResponse(timestamp=2025-12-08T13:25:15.965108100, status=500, error=Internal Server Error, mess (truncated)...]
+2025-12-08 13:25:16 [Test worker] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.security.authorization.AuthorizationDeniedException: Access Denied]
+2025-12-08 13:25:16 [SpringApplicationShutdownHook] DEBUG o.s.w.c.s.GenericWebApplicationContext - Closing org.springframework.web.context.support.GenericWebApplicationContext@62054faf, started on Mon Dec 08 13:24:43 IST 2025
+2025-12-08 13:25:16 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-08 13:25:16 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-12-08 13:25:16 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-12-08 13:27:41 [Test worker] INFO  c.s.i.MemberControllerIntegrationTest - Starting MemberControllerIntegrationTest using Java 17.0.17 with PID 17752 (started by SaraswatiHiremath in C:\Users\SaraswatiHiremath\Downloads\surest_member_management\surest_member_management)
+2025-12-08 13:27:41 [Test worker] DEBUG c.s.i.MemberControllerIntegrationTest - Running with Spring Boot v3.5.7, Spring v6.2.12
+2025-12-08 13:27:41 [Test worker] INFO  c.s.i.MemberControllerIntegrationTest - No active profile set, falling back to 1 default profile: "default"
+2025-12-08 13:27:41 [Test worker] DEBUG o.s.w.c.s.GenericWebApplicationContext - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@75d539b9
+2025-12-08 13:27:46 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-12-08 13:27:46 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-08 13:27:46 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 685 ms. Found 2 JPA repository interfaces.
+2025-12-08 13:27:46 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-12-08 13:27:46 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-12-08 13:27:47 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.surest.repository.MemberRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-12-08 13:27:47 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.surest.repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-12-08 13:27:47 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 20 ms. Found 0 Redis repository interfaces.
+2025-12-08 13:28:00 [Test worker] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-08 13:28:01 [Test worker] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4ac805af
+2025-12-08 13:28:01 [Test worker] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-08 13:28:01 [Test worker] INFO  org.flywaydb.core.FlywayExecutor - Database: jdbc:postgresql://localhost:5432/surest_db (PostgreSQL 18.1)
+2025-12-08 13:28:01 [Test worker] WARN  o.f.c.i.database.base.Database - Flyway upgrade recommended: PostgreSQL 18.1 is newer than this version of Flyway and support has not been tested. The latest supported version of PostgreSQL is 17.
+2025-12-08 13:28:01 [Test worker] INFO  o.f.core.internal.command.DbValidate - Successfully validated 2 migrations (execution time 00:00.175s)
+2025-12-08 13:28:01 [Test worker] INFO  o.f.core.internal.command.DbMigrate - Current version of schema "public": 2
+2025-12-08 13:28:01 [Test worker] INFO  o.f.core.internal.command.DbMigrate - Schema "public" is up to date. No migration necessary.
+2025-12-08 13:28:02 [Test worker] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-08 13:28:02 [Test worker] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.33.Final
+2025-12-08 13:28:03 [Test worker] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-12-08 13:28:03 [Test worker] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-08 13:28:04 [Test worker] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 18.1
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-12-08 13:28:09 [Test worker] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-08 13:28:09 [Test worker] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-08 13:28:11 [Test worker] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsServiceImpl
+2025-12-08 13:28:12 [Test worker] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-08 13:28:12 [Test worker] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 12 mappings in 'requestMappingHandlerMapping'
+2025-12-08 13:28:13 [Test worker] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2025-12-08 13:28:14 [Test worker] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-12-08 13:28:14 [Test worker] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-12-08 13:28:16 [Test worker] DEBUG c.surest.security.JwtRequestFilter - Filter 'jwtRequestFilter' configured for use
+2025-12-08 13:28:16 [Test worker] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-12-08 13:28:16 [Test worker] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-12-08 13:28:16 [Test worker] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 4 ms
+2025-12-08 13:28:16 [Test worker] INFO  c.s.i.MemberControllerIntegrationTest - Started MemberControllerIntegrationTest in 37.784 seconds (process running for 47.346)
+2025-12-08 13:28:16 [Test worker] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.surest.controller.MemberController#createMember(MemberDTO)
+2025-12-08 13:28:17 [Test worker] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [MemberDTO(id=null, firstName=John, lastName=Doe, dateOfBirth=1990-01-01, email=john.doe@example.com)]
+2025-12-08 13:28:17 [Test worker] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Using @ExceptionHandler com.surest.exception.GlobalExceptionHandler#handleAccessDenied(AccessDeniedException, HttpServletRequest)
+2025-12-08 13:28:17 [Test worker] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2025-12-08 13:28:17 [Test worker] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [ErrorResponse(timestamp=2025-12-08T13:28:17.337856600, status=403, error=Forbidden, message=Access i (truncated)...]
+2025-12-08 13:28:17 [Test worker] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.security.authorization.AuthorizationDeniedException: Access Denied]
+2025-12-08 13:28:17 [SpringApplicationShutdownHook] DEBUG o.s.w.c.s.GenericWebApplicationContext - Closing org.springframework.web.context.support.GenericWebApplicationContext@75d539b9, started on Mon Dec 08 13:27:41 IST 2025
+2025-12-08 13:28:18 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-08 13:28:18 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-12-08 13:28:18 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-12-08 13:28:57 [Test worker] INFO  c.s.i.MemberControllerIntegrationTest - Starting MemberControllerIntegrationTest using Java 17.0.17 with PID 17020 (started by SaraswatiHiremath in C:\Users\SaraswatiHiremath\Downloads\surest_member_management\surest_member_management)
+2025-12-08 13:28:57 [Test worker] DEBUG c.s.i.MemberControllerIntegrationTest - Running with Spring Boot v3.5.7, Spring v6.2.12
+2025-12-08 13:28:57 [Test worker] INFO  c.s.i.MemberControllerIntegrationTest - No active profile set, falling back to 1 default profile: "default"
+2025-12-08 13:28:57 [Test worker] DEBUG o.s.w.c.s.GenericWebApplicationContext - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@48ee3c2d
+2025-12-08 13:29:02 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-12-08 13:29:02 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-08 13:29:03 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 843 ms. Found 2 JPA repository interfaces.
+2025-12-08 13:29:03 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-12-08 13:29:03 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-12-08 13:29:03 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.surest.repository.MemberRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-12-08 13:29:03 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.surest.repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-12-08 13:29:03 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 32 ms. Found 0 Redis repository interfaces.
+2025-12-08 13:29:13 [Test worker] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-08 13:29:15 [Test worker] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@361c3c1
+2025-12-08 13:29:15 [Test worker] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-08 13:29:15 [Test worker] INFO  org.flywaydb.core.FlywayExecutor - Database: jdbc:postgresql://localhost:5432/surest_db (PostgreSQL 18.1)
+2025-12-08 13:29:15 [Test worker] WARN  o.f.c.i.database.base.Database - Flyway upgrade recommended: PostgreSQL 18.1 is newer than this version of Flyway and support has not been tested. The latest supported version of PostgreSQL is 17.
+2025-12-08 13:29:16 [Test worker] INFO  o.f.core.internal.command.DbValidate - Successfully validated 2 migrations (execution time 00:00.233s)
+2025-12-08 13:29:16 [Test worker] INFO  o.f.core.internal.command.DbMigrate - Current version of schema "public": 2
+2025-12-08 13:29:16 [Test worker] INFO  o.f.core.internal.command.DbMigrate - Schema "public" is up to date. No migration necessary.
+2025-12-08 13:29:17 [Test worker] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-08 13:29:17 [Test worker] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.33.Final
+2025-12-08 13:29:19 [Test worker] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-12-08 13:29:20 [Test worker] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-08 13:29:21 [Test worker] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 18.1
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-12-08 13:29:27 [Test worker] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-08 13:29:27 [Test worker] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-08 13:29:29 [Test worker] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsServiceImpl
+2025-12-08 13:29:30 [Test worker] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-08 13:29:31 [Test worker] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 12 mappings in 'requestMappingHandlerMapping'
+2025-12-08 13:29:31 [Test worker] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2025-12-08 13:29:33 [Test worker] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-12-08 13:29:33 [Test worker] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-12-08 13:29:35 [Test worker] DEBUG c.surest.security.JwtRequestFilter - Filter 'jwtRequestFilter' configured for use
+2025-12-08 13:29:35 [Test worker] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-12-08 13:29:35 [Test worker] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-12-08 13:29:35 [Test worker] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 4 ms
+2025-12-08 13:29:35 [Test worker] INFO  c.s.i.MemberControllerIntegrationTest - Started MemberControllerIntegrationTest in 41.389 seconds (process running for 51.013)
+2025-12-08 13:29:36 [Test worker] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.surest.controller.MemberController#createMember(MemberDTO)
+2025-12-08 13:29:36 [Test worker] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [MemberDTO(id=null, firstName=John, lastName=Doe, dateOfBirth=1990-01-01, email=john.doe@example.com)]
+2025-12-08 13:29:37 [Test worker] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Using @ExceptionHandler com.surest.exception.GlobalExceptionHandler#handleMemberExists(MemberAlreadyExistsException, HttpServletRequest)
+2025-12-08 13:29:37 [Test worker] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2025-12-08 13:29:37 [Test worker] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [ErrorResponse(timestamp=2025-12-08T13:29:37.013330800, status=409, error=Conflict, message=Member al (truncated)...]
+2025-12-08 13:29:37 [Test worker] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.surest.exception.MemberAlreadyExistsException: Member already exists with email: john.doe@example.com]
+2025-12-08 13:29:37 [Test worker] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.surest.controller.MemberController#createMember(MemberDTO)
+2025-12-08 13:29:37 [Test worker] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [MemberDTO(id=null, firstName=John, lastName=Doe, dateOfBirth=1990-01-01, email=john.doe@example.com)]
+2025-12-08 13:29:37 [Test worker] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Using @ExceptionHandler com.surest.exception.GlobalExceptionHandler#handleAccessDenied(AccessDeniedException, HttpServletRequest)
+2025-12-08 13:29:37 [Test worker] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2025-12-08 13:29:37 [Test worker] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [ErrorResponse(timestamp=2025-12-08T13:29:37.404285600, status=403, error=Forbidden, message=Access i (truncated)...]
+2025-12-08 13:29:37 [Test worker] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.security.authorization.AuthorizationDeniedException: Access Denied]
+2025-12-08 13:29:37 [Test worker] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.surest.controller.MemberController#createMember(MemberDTO)
+2025-12-08 13:29:37 [Test worker] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [MemberDTO(id=null, firstName=John, lastName=Doe, dateOfBirth=1990-01-01, email=john.doe@example.com)]
+2025-12-08 13:29:37 [Test worker] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2025-12-08 13:29:37 [Test worker] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [MemberDTO(id=8aaf470f-8e3c-480a-9f26-5858401f5346, firstName=John, lastName=Doe, dateOfBirth=1990-01 (truncated)...]
+2025-12-08 13:29:37 [Test worker] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.surest.controller.MemberController#getMemberById(UUID)
+2025-12-08 13:29:37 [Test worker] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2025-12-08 13:29:37 [Test worker] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [MemberDTO(id=1c864ba2-a17a-4580-b8bd-9487c7c766f0, firstName=John, lastName=Doe, dateOfBirth=1990-01 (truncated)...]
+2025-12-08 13:29:37 [Test worker] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.surest.controller.MemberController#createMember(MemberDTO)
+2025-12-08 13:29:37 [Test worker] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [MemberDTO(id=null, firstName=, lastName=, dateOfBirth=null, email=not-an-email)]
+2025-12-08 13:29:37 [Test worker] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Using @ExceptionHandler com.surest.exception.GlobalExceptionHandler#handleValidationErrors(MethodArgumentNotValidException, HttpServletRequest)
+2025-12-08 13:29:37 [Test worker] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2025-12-08 13:29:37 [Test worker] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [ErrorResponse(timestamp=2025-12-08T13:29:37.674088900, status=400, error=Bad Request, message=email: (truncated)...]
+2025-12-08 13:29:37 [Test worker] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.surest.dto.MemberDTO> com.surest.controller.MemberController.createMember(com.surest.dto.MemberDTO) with 4 errors: [Field error in object 'memberDTO' on field 'email': rejected value [not-an-email]; codes [Email.memberDTO.email,Email.email,Email.java.lang.String,Email]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [memberDTO.email,email]; arguments []; default message [email],[Ljakarta.validation.constraints.Pattern$Flag;@5aad6abb,.*]; default message [Email should be valid]] [Field error in object 'memberDTO' on field 'lastName': rejected value []; codes [NotBlank.memberDTO.lastName,NotBlank.lastName,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [memberDTO.lastName,lastName]; arguments []; default message [lastName]]; default message [Last name is required]] [Field error in object 'memberDTO' on field 'dateOfBirth': rejected value [null]; codes [NotNull.memberDTO.dateOfBirth,NotNull.dateOfBirth,NotNull.java.time.LocalDate,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [memberDTO.dateOfBirth,dateOfBirth]; arguments []; default message [dateOfBirth]]; default message [Date of birth is required]] [Field error in object 'memberDTO' on field 'firstName': rejected value []; codes [NotBlank.memberDTO.firstName,NotBlank.firstName,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [memberDTO.firstName,firstName]; arguments []; default message [firstName]]; default message [First name is required]] ]
+2025-12-08 13:29:37 [Test worker] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.surest.controller.MemberController#getMemberById(UUID)
+2025-12-08 13:29:37 [Test worker] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Using @ExceptionHandler com.surest.exception.GlobalExceptionHandler#handleMemberNotFound(MemberNotFoundException, HttpServletRequest)
+2025-12-08 13:29:37 [Test worker] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2025-12-08 13:29:37 [Test worker] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [ErrorResponse(timestamp=2025-12-08T13:29:37.720552600, status=404, error=Not Found, message=Member n (truncated)...]
+2025-12-08 13:29:37 [Test worker] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.surest.exception.MemberNotFoundException: Member not found with Id: ce12d47b-73bc-4fc4-8d35-fe35833f71ec]
+2025-12-08 13:29:37 [Test worker] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.surest.controller.MemberController#deleteMember(UUID)
+2025-12-08 13:29:37 [Test worker] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2025-12-08 13:29:37 [Test worker] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Nothing to write: null body
+2025-12-08 13:29:37 [Test worker] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.surest.controller.MemberController#getAllMembers(int, int, String, String, String)
+2025-12-08 13:29:37 [Test worker] WARN  o.s.d.w.c.SpringDataJacksonConfiguration$PageModule$WarningLoggingModifier - Serializing PageImpl instances as-is is not supported, meaning that there is no guarantee about the stability of the resulting JSON structure!
+	For a stable JSON structure, please use Spring Data's PagedModel (globally via @EnableSpringDataWebSupport(pageSerializationMode = VIA_DTO))
+	or Spring HATEOAS and Spring Data's PagedResourcesAssembler as documented in https://docs.spring.io/spring-data/commons/reference/repositories/core-extensions.html#core.web.pageables.
+
+2025-12-08 13:29:37 [Test worker] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2025-12-08 13:29:37 [Test worker] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [Page 1 of 1 containing com.surest.dto.MemberDTO instances]
+2025-12-08 13:29:38 [Test worker] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.surest.controller.MemberController#updateMember(UUID, MemberDTO)
+2025-12-08 13:29:38 [Test worker] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [MemberDTO(id=null, firstName=Johnny, lastName=Doe, dateOfBirth=1990-01-01, email=john.doe@example.co (truncated)...]
+2025-12-08 13:29:38 [Test worker] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2025-12-08 13:29:38 [Test worker] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [MemberDTO(id=a8f84151-0230-4f77-993f-b1538877d088, firstName=Johnny, lastName=Doe, dateOfBirth=1990- (truncated)...]
+2025-12-08 13:29:38 [SpringApplicationShutdownHook] DEBUG o.s.w.c.s.GenericWebApplicationContext - Closing org.springframework.web.context.support.GenericWebApplicationContext@48ee3c2d, started on Mon Dec 08 13:28:57 IST 2025
+2025-12-08 13:29:38 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-08 13:29:38 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-12-08 13:29:38 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
