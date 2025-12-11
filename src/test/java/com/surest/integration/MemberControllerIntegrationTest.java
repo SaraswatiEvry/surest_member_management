@@ -47,12 +47,13 @@ class MemberControllerIntegrationTest {
     private MemberService memberService;
 
     private MemberDTO sampleMember(UUID id) {
-        MemberDTO dto = new MemberDTO();
+        MemberDTO dto = new MemberDTO(UUID.randomUUID(), "John", "Doe", LocalDate.of(1990, 1, 1), "john@example.com", 1);
         dto.setId(id);
         dto.setFirstName("John");
         dto.setLastName("Doe");
         dto.setEmail("john.doe@example.com");
         dto.setDateOfBirth(LocalDate.of(1990, 1, 1));
+        dto.setVersion(1);
         return dto;
     }
 
@@ -169,7 +170,8 @@ class MemberControllerIntegrationTest {
               "firstName": "Johnny",
               "lastName": "Doe",
               "email": "john.doe@example.com",
-              "dateOfBirth": "1990-01-01"
+              "dateOfBirth": "1990-01-01",
+              "version": 1
             }
             """;
 
@@ -225,7 +227,8 @@ class MemberControllerIntegrationTest {
               "firstName": "",
               "lastName": "",
               "email": "not-an-email",
-              "dateOfBirth": null
+              "dateOfBirth": null,
+              "version": 0
             }
             """;
 

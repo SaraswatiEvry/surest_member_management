@@ -1,6 +1,7 @@
 package com.surest.dto;
 
 import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
@@ -29,4 +30,7 @@ public class MemberDTO implements Serializable {
     @Email(message = "Email should be valid")
     @NotBlank(message = "Email is required")
     private String email;
+
+    @Min(value = 0, message = "Version must be zero or positive")
+    private Integer version;
 }

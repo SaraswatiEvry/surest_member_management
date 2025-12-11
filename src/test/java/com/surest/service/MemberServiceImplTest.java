@@ -3,9 +3,10 @@ package com.surest.service;
 
 import com.surest.dto.MemberDTO;
 import com.surest.entity.Member;
+import com.surest.exception.MemberAlreadyExistsException;
+import com.surest.exception.MemberNotFoundException;
 import com.surest.repository.MemberRepository;
 import com.surest.util.MemberMapper;
-import jakarta.persistence.EntityExistsException;
 import jakarta.persistence.EntityNotFoundException;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -53,7 +54,7 @@ public class MemberServiceImplTest {
         member.setEmail("john@example.com");
         member.setDateOfBirth(LocalDate.of(1990, 1, 1));
 
-        memberDTO = new MemberDTO(memberId, "John", "Doe", LocalDate.of(1990, 1, 1), "john@example.com");
+        memberDTO = new MemberDTO(memberId, "John", "Doe", LocalDate.of(1990, 1, 1), "john@example.com", 1);
     }
 
     @Test
@@ -86,7 +87,7 @@ public class MemberServiceImplTest {
     void testGetMemberById_NotFound() {
         when(memberRepository.findById(memberId)).thenReturn(Optional.empty());
 
-        assertThrows(EntityNotFoundException.class, () -> memberService.getMemberById(memberId));
+        assertThrows(MemberNotFoundException.class, () -> memberService.getMemberById(memberId));
     }
 
     @Test
@@ -106,7 +107,7 @@ public class MemberServiceImplTest {
     void testCreateMember_AlreadyExists() {
         when(memberRepository.existsByEmail(memberDTO.getEmail())).thenReturn(true);
 
-        assertThrows(EntityExistsException.class, () -> memberService.createMember(memberDTO));
+        assertThrows(MemberAlreadyExistsException.class, () -> memberService.createMember(memberDTO));
         verify(memberRepository, never()).save(any());
     }
 

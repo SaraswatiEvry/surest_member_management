@@ -31,9 +31,9 @@ public class MemberControllerTest {
     @Test
     void testGetAllMembers() {
         MemberDTO member1 = new MemberDTO(UUID.randomUUID(), "John", "Doe",
-                LocalDate.of(1990, 1, 1), "john@example.com");
+                LocalDate.of(1990, 1, 1), "john@example.com", 1);
         MemberDTO member2 = new MemberDTO(UUID.randomUUID(), "Jane", "Smith",
-                LocalDate.of(1985, 5, 15), "jane@example.com");
+                LocalDate.of(1985, 5, 15), "jane@example.com", 2);
         Page<MemberDTO> pageResult = new PageImpl<>(List.of(member1, member2));
 
         when(memberService.getAllMembers(anyInt(), anyInt(), anyString(), any(), any()))
@@ -49,7 +49,7 @@ public class MemberControllerTest {
     void testGetMemberById() {
         UUID id = UUID.randomUUID();
         MemberDTO member = new MemberDTO(id, "John", "Doe",
-                LocalDate.of(1990, 1, 1), "john@example.com");
+                LocalDate.of(1990, 1, 1), "john@example.com", 1);
 
         when(memberService.getMemberById(id)).thenReturn(member);
 
@@ -62,9 +62,9 @@ public class MemberControllerTest {
     @Test
     void testCreateMember() {
         MemberDTO dto = new MemberDTO(null, "Alice", "Brown",
-                LocalDate.of(1992, 3, 10), "alice@example.com");
+                LocalDate.of(1992, 3, 10), "alice@example.com", 1);
         MemberDTO savedDto = new MemberDTO(UUID.randomUUID(), "Alice", "Brown",
-                LocalDate.of(1992, 3, 10), "alice@example.com");
+                LocalDate.of(1992, 3, 10), "alice@example.com", 1);
 
         when(memberService.createMember(dto)).thenReturn(savedDto);
 
@@ -78,7 +78,7 @@ public class MemberControllerTest {
     void testUpdateMember() {
         UUID id = UUID.randomUUID();
         MemberDTO dto = new MemberDTO(id, "Updated", "Name",
-                LocalDate.of(1995, 7, 20), "updated@example.com");
+                LocalDate.of(1995, 7, 20), "updated@example.com", 1);
 
         when(memberService.updateMember(id, dto)).thenReturn(dto);
 

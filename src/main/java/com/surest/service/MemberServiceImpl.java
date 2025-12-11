@@ -7,7 +7,7 @@ import com.surest.exception.MemberNotFoundException;
 import com.surest.repository.MemberRepository;
 import com.surest.util.MemberMapper;
 import jakarta.persistence.EntityNotFoundException;
-import jakarta.transaction.Transactional;
+import org.springframework.transaction.annotation.Transactional;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.cache.annotation.CacheEvict;
@@ -30,7 +30,7 @@ public class MemberServiceImpl implements MemberService {
     private final MemberMapper memberMapper;
 
     @Override
-    @Transactional
+    @Transactional(readOnly = true)
     public Page<MemberDTO> getAllMembers(int page, int size, String sort, String firstName,
                                          String lastName) {
 
@@ -54,7 +54,7 @@ public class MemberServiceImpl implements MemberService {
 
     @Override
     @Cacheable(value = "members", key = "#id.toString()")
-    @Transactional
+    @Transactional(readOnly = true)
     public MemberDTO getMemberById(UUID id) {
         log.info("Fetching member by ID: {}", id);
         return memberRepository.findById(id)
