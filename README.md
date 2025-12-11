@@ -1,1 +1,1 @@
-# surest_member_management
+Demo project for surest_member_management
