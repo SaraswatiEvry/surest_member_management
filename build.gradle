@@ -1,7 +1,8 @@
+
 plugins {
-	id 'java'
-	id 'org.springframework.boot' version '3.5.7'
-	id 'io.spring.dependency-management' version '1.1.7'
+    id 'java'
+    id 'org.springframework.boot' version '3.5.7'
+    id 'io.spring.dependency-management' version '1.1.7'
     id 'jacoco'
 }
 
@@ -10,78 +11,98 @@ version = '0.0.1-SNAPSHOT'
 description = 'Surest Member Management'
 
 java {
-	toolchain {
-		languageVersion = JavaLanguageVersion.of(17)
-	}
-}
-
-configurations {
-	compileOnly {
-		extendsFrom annotationProcessor
-	}
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
 }
 
 repositories {
-	mavenCentral()
+    mavenCentral()
 }
 
 dependencies {
-	implementation 'org.springframework.boot:spring-boot-starter-cache'
-	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
-	implementation 'org.springframework.boot:spring-boot-starter-security'
-	implementation 'org.springframework.boot:spring-boot-starter-validation'
-	implementation 'org.springframework.boot:spring-boot-starter-web'
-	implementation 'org.flywaydb:flyway-core'
-	implementation 'org.flywaydb:flyway-database-postgresql'
-	compileOnly 'org.projectlombok:lombok'
-	runtimeOnly 'org.postgresql:postgresql'
-	annotationProcessor 'org.projectlombok:lombok'
-	testImplementation 'org.springframework.boot:spring-boot-starter-test'
-	testImplementation 'org.springframework.security:spring-security-test'
-	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+    implementation 'org.springframework.boot:spring-boot-starter-cache'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+    implementation 'org.springframework.boot:spring-boot-starter-validation'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.flywaydb:flyway-core'
+    implementation 'org.flywaydb:flyway-database-postgresql'
+
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+
+    runtimeOnly 'org.postgresql:postgresql'
+
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation 'org.springframework.security:spring-security-test'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
     implementation 'io.jsonwebtoken:jjwt-api:0.11.5'
     runtimeOnly 'io.jsonwebtoken:jjwt-impl:0.11.5'
     runtimeOnly 'io.jsonwebtoken:jjwt-jackson:0.11.5'
+
     implementation 'org.mapstruct:mapstruct:1.5.5.Final'
     annotationProcessor 'org.mapstruct:mapstruct-processor:1.5.5.Final'
+
     implementation 'org.springframework.boot:spring-boot-starter-data-redis'
     implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.8.8'
 }
 
 tasks.named('test') {
-	useJUnitPlatform()
-}
-
-jacocoTestReport {
-    reports {
-        xml.required = true
-        html.required = true
-    }
-    classDirectories.setFrom(
-            files(classDirectories.files.collect {
-                fileTree(dir: it, exclude: [
-                        '**/dto/**',
-                        '**/exception/**',
-                        '**/entity/**'
-                ])
-            })
-    )
+    useJUnitPlatform()
 }
 
 jacoco {
-    toolVersion = "0.8.10" // latest stable
+    toolVersion = "0.8.10"
 }
 
-tasks.test {
-    useJUnitPlatform()
-    finalizedBy(tasks.jacocoTestReport) // ensures report runs after tests
-}
-
-tasks.jacocoTestReport {
+/**
+ * Configure the existing jacocoTestReport task (do not register a new one).
+ * This ensures controllers are included while allowing you to exclude DTO/exception/entity.
+ */
+tasks.named('jacocoTestReport', JacocoReport) {
     dependsOn(tasks.test)
+
+    // Paths where Gradle emits compiled classes
+    def javaMain   = file("$build/classes/java/main")
+
+    classDirectories.setFrom(files(javaMain).collect {
+        fileTree(dir: it, include: ['**/*.class'], exclude: [
+                // Keep exclusions minimal; DO NOT exclude controllers
+                '**/dto/**',
+                '**/exception/**',
+                '**/entity/**'
+        ])
+    })
+
+    // Source roots for mapping in HTML report
+    sourceDirectories.setFrom(files('src/main/java', 'src/main/kotlin'))
+
+    // Attach JaCoCo execution data produced by the test task
+    executionData.setFrom(fileTree(dir: build, includes: [
+            'jacoco/test.exec',
+            'jacoco/test-*.exec',
+            'jacoco/*.exec'
+    ]))
+
     reports {
         html.required.set(true)
         xml.required.set(true)
         csv.required.set(false)
     }
+
+    // Optional: print what is included to debug coverage content
+    doFirst {
+        println "JaCoCo exec files: ${executionData.files}"
+        println "Class dirs: ${classDirectories.files}"
+        println "Source dirs: ${sourceDirectories.files}"
+    }
+}
+
+/**
+ * Ensure the report runs after tests.
+ */
+tasks.named('test') {
+    finalizedBy(tasks.named('jacocoTestReport'))
 }

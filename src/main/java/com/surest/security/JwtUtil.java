@@ -34,7 +34,6 @@ public class JwtUtil {
     public JwtUtil() {
     }
 
-
     Key getSigningKey() {
         if (secretKey == null || secretKey.isBlank()) {
             throw new IllegalStateException("app.secret.key must be configured");
@@ -44,12 +43,16 @@ public class JwtUtil {
         try {
             keyBytes = Base64.getDecoder().decode(secretKey);
         } catch (IllegalArgumentException ex) {
-            // Not valid Base64 — treat as plain text
-            keyBytes = secretKey.getBytes(StandardCharsets.UTF_8);
+            keyBytes = secretKey.getBytes(StandardCharsets.UTF_8); // plain text fallback
         }
+
+        if (keyBytes.length < 64) { // 64 bytes == 512 bits for HS512
+            throw new IllegalStateException(
+                    "app.secret.key must be >= 64 bytes for HS512. Provided=" + (keyBytes.length * 8) + " bits");
+        }
+
         return Keys.hmacShaKeyFor(keyBytes);
     }
-
 
     public String generateToken(UserDetails userDetails) {
         return Jwts.builder()
