@@ -5,6 +5,8 @@ import io.jsonwebtoken.JwtException;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import io.jsonwebtoken.security.Keys;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Component;
@@ -15,6 +17,8 @@ import java.util.Base64;
 import java.util.Date;
 
 @Component
+@NoArgsConstructor      // Spring will use field injection with @Value
+@AllArgsConstructor     // Allows easy construction in unit tests
 public class JwtUtil {
 
     @Value("${app.secret.key}")
@@ -23,16 +27,6 @@ public class JwtUtil {
 
     @Value("${app.jwt-expiration-milliseconds}")
     private long expirationMillis;
-
-    // Extra constructor for unit tests (no Spring)
-    public JwtUtil(String secretKey, long expirationMillis) {
-        this.secretKey = secretKey;
-        this.expirationMillis = expirationMillis;
-    }
-
-    // No-arg constructor still needed for Spring
-    public JwtUtil() {
-    }
 
     Key getSigningKey() {
         if (secretKey == null || secretKey.isBlank()) {

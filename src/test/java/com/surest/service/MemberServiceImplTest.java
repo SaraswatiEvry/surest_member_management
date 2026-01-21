@@ -2,12 +2,12 @@
 package com.surest.service;
 
 import com.surest.dto.MemberDTO;
+import com.surest.dto.MemberSearchRequest;
 import com.surest.entity.Member;
 import com.surest.exception.MemberAlreadyExistsException;
 import com.surest.exception.MemberNotFoundException;
 import com.surest.repository.MemberRepository;
 import com.surest.util.MemberMapper;
-import jakarta.persistence.EntityNotFoundException;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -15,9 +15,7 @@ import org.mockito.ArgumentMatchers;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageImpl;
-import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.*;
 import org.springframework.data.jpa.domain.Specification;
 
 import java.time.LocalDate;
@@ -61,7 +59,7 @@ public class MemberServiceImplTest {
     void testGetAllMembers() {
         Page<Member> memberPage = new PageImpl<>(List.of(member));
         when(memberRepository.findAll(
-                ArgumentMatchers.<Specification<Member>> any(), any(Pageable.class)
+                ArgumentMatchers.<Specification<Member>>any(), any(Pageable.class)
         )).thenReturn(memberPage);
         when(memberMapper.toMemberDTO(member)).thenReturn(memberDTO);
 
@@ -69,8 +67,71 @@ public class MemberServiceImplTest {
 
         assertEquals(1, result.getContent().size());
         assertEquals("John", result.getContent().get(0).getFirstName());
-        verify(memberRepository, times(1)).findAll(ArgumentMatchers.<Specification<Member>> any(), any(Pageable.class));
+        verify(memberRepository, times(1)).findAll(ArgumentMatchers.<Specification<Member>>any(), any(Pageable.class));
     }
+
+    // ------- NEW TESTS FOR searchMembers -------
+
+    @Test
+    void testSearchMembers_WithFilters() {
+        // Arrange
+        MemberSearchRequest req = new MemberSearchRequest();
+        req.setPage(0);
+        req.setSize(5);
+        req.setSort(List.of("lastName,asc", "firstName,desc"));
+        req.setFirstName("Jo");
+        req.setLastName("Do");
+
+        Pageable pageable = PageRequest.of(0, 5, Sort.by(
+                Sort.Order.asc("lastName"),
+                Sort.Order.desc("firstName")
+        ));
+
+        Page<Member> memberPage = new PageImpl<>(List.of(member), pageable, 1);
+        when(memberRepository.findAll(
+                ArgumentMatchers.<Specification<Member>>any(),
+                any(Pageable.class)
+        )).thenReturn(memberPage);
+        when(memberMapper.toMemberDTO(member)).thenReturn(memberDTO);
+
+        // Act
+        Page<MemberDTO> result = memberService.searchMembers(req, pageable);
+
+        // Assert
+        assertEquals(1, result.getTotalElements());
+        assertEquals("John", result.getContent().get(0).getFirstName());
+        verify(memberRepository, times(1))
+                .findAll(ArgumentMatchers.<Specification<Member>>any(), eq(pageable));
+        verify(memberMapper, times(1)).toMemberDTO(member);
+    }
+
+    @Test
+    void testSearchMembers_WithoutFilters() {
+        // Arrange
+        MemberSearchRequest req = new MemberSearchRequest();
+        req.setPage(1);
+        req.setSize(10);
+        // no sort or filters provided
+        Pageable pageable = PageRequest.of(1, 10);
+
+        Page<Member> memberPage = new PageImpl<>(List.of(member), pageable, 11);
+        when(memberRepository.findAll(
+                ArgumentMatchers.<Specification<Member>>any(),
+                any(Pageable.class)
+        )).thenReturn(memberPage);
+        when(memberMapper.toMemberDTO(member)).thenReturn(memberDTO);
+
+        // Act
+        Page<MemberDTO> result = memberService.searchMembers(req, pageable);
+
+        // Assert
+        assertEquals(11, result.getTotalElements());
+        assertEquals("John", result.getContent().get(0).getFirstName());
+        verify(memberRepository, times(1))
+                .findAll(ArgumentMatchers.<Specification<Member>>any(), eq(pageable));
+    }
+
+    // ------- Existing tests (unchanged) -------
 
     @Test
     void testGetMemberById_Success() {
@@ -127,7 +188,7 @@ public class MemberServiceImplTest {
     void testUpdateMember_NotFound() {
         when(memberRepository.findById(memberId)).thenReturn(Optional.empty());
 
-        assertThrows(EntityNotFoundException.class, () -> memberService.updateMember(memberId, memberDTO));
+        assertThrows(MemberNotFoundException.class, () -> memberService.updateMember(memberId, memberDTO));
     }
 
     @Test

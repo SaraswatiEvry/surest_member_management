@@ -1,4 +1,3 @@
-
 package com.surest.controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -83,7 +82,7 @@ class MemberControllerIntegrationTest {
 
     @Test
     @DisplayName("GET /members as USER → 200 OK with paged content")
-    @WithMockUser(username = "user1", roles = {"USER"})
+    @WithMockUser(username = "user1")
     void getAllMembers_asUser_ok() throws Exception {
         MemberDTO m1 = new MemberDTO(UUID.randomUUID(), "Alice", "Johnson",
                 LocalDate.of(1990, 1, 15), "alice.johnson@example.com", 0);
@@ -124,7 +123,7 @@ class MemberControllerIntegrationTest {
 
     @Test
     @DisplayName("GET /members/{id} as USER → 200 OK")
-    @WithMockUser(username = "user1", roles = {"USER"})
+    @WithMockUser(username = "user1")
     void getMemberById_asUser_ok() throws Exception {
         UUID id = UUID.randomUUID();
         MemberDTO dto = new MemberDTO(id, "Charlie", "Brown",
@@ -193,7 +192,7 @@ class MemberControllerIntegrationTest {
 
     @Test
     @DisplayName("POST /members as USER → 403 Forbidden")
-    @WithMockUser(username = "user1", roles = {"USER"})
+    @WithMockUser(username = "user1")
     void createMember_asUser_forbidden() throws Exception {
         MemberDTO requestDto = new MemberDTO(
                 null, "Jane", "Roe",
@@ -278,7 +277,7 @@ class MemberControllerIntegrationTest {
 
     @Test
     @DisplayName("PUT /members/{id} as USER → 403 Forbidden")
-    @WithMockUser(username = "user1", roles = {"USER"})
+    @WithMockUser(username = "user1")
     void updateMember_asUser_forbidden() throws Exception {
         UUID id = UUID.randomUUID();
         MemberDTO requestDto = new MemberDTO(
@@ -355,7 +354,7 @@ class MemberControllerIntegrationTest {
 
     @Test
     @DisplayName("DELETE /members/{id} as USER → 403 Forbidden")
-    @WithMockUser(username = "user1", roles = {"USER"})
+    @WithMockUser(username = "user1")
     void deleteMember_asUser_forbidden() throws Exception {
         UUID id = UUID.randomUUID();
 
